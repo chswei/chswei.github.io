@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Chswei Blog</title>
+    <title>Posts on Random Forest</title>
     <link>https://chswei.github.io/post/</link>
-    <description>Recent content in Posts on Chswei Blog</description>
+    <description>Recent content in Posts on Random Forest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>All rights reserved - 2018</copyright>
@@ -18,7 +18,7 @@
       <pubDate>Mon, 09 Jul 2018 21:48:35 +0800</pubDate>
       
       <guid>https://chswei.github.io/post/test/</guid>
-      <description>測試測試 Ｔhis is a testing article.</description>
+      <description>測試測試 This is a testing article.</description>
     </item>
     
   </channel>

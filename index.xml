@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Chswei Blog</title>
+    <title>Random Forest</title>
     <link>https://chswei.github.io/</link>
-    <description>Recent content on Chswei Blog</description>
+    <description>Recent content on Random Forest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>All rights reserved - 2018</copyright>
-    <lastBuildDate>Mon, 09 Jul 2018 21:48:35 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 11 Jul 2018 23:21:12 +0800</lastBuildDate>
     
 	<atom:link href="https://chswei.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About Me</title>
+      <link>https://chswei.github.io/about/</link>
+      <pubDate>Wed, 11 Jul 2018 23:21:12 +0800</pubDate>
+      
+      <guid>https://chswei.github.io/about/</guid>
+      <description>醫學生，最近對資料科學產生興趣。\n Medical student, interested in data science recently.</description>
+    </item>
     
     <item>
       <title>Test</title>
@@ -18,16 +27,7 @@
       <pubDate>Mon, 09 Jul 2018 21:48:35 +0800</pubDate>
       
       <guid>https://chswei.github.io/post/test/</guid>
-      <description>測試測試 Ｔhis is a testing article.</description>
-    </item>
-    
-    <item>
-      <title>Tesing article</title>
-      <link>https://chswei.github.io/about/</link>
-      <pubDate>Mon, 09 Jul 2018 18:58:12 +0800</pubDate>
-      
-      <guid>https://chswei.github.io/about/</guid>
-      <description>This is a testing file.</description>
+      <description>測試測試 This is a testing article.</description>
     </item>
     
   </channel>
