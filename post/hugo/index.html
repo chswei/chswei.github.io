@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="在 GitHub 部署 Hugo 靜態網站"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@wujiyaker"/>
+
+
+
+  	<meta property="og:title" content="在 GitHub 部署 Hugo 靜態網站 &middot; Random Forest" />
+  	<meta property="og:site_name" content="Random Forest" />
+  	<meta property="og:url" content="https://chswei.github.io/post/hugo/" />
+
+    
+        
+            <meta property="og:image" content="/images/forest.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2018-07-12T22:36:43&#43;08:00" />
+
+    
+    
+
+    <title>在 GitHub 部署 Hugo 靜態網站 &middot; Random Forest</title>
+
+    
+    <meta name="description" content="第一次搭建個人網站，選擇了 Hugo。儘管官方文件寫得很詳細，但 Programming 新手如我在建立的過程中還是遇到了一些困難，因此紀錄一下，希望能幫到跟我同樣情況的人。
+以下分為兩部分介紹：本地建立檔案、部署到 GitHub。(使用 MacOS)
+第一部分：本地建立檔案 老實說 Hugo 真的很人性化，簡單幾個步" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://chswei.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://chswei.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://chswei.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://chswei.github.io/css/nav.css" />
+
+    
+
+    
+
+    
+      
+          <link href="https://chswei.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Random Forest" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.42.2" />
+
+    <link rel="canonical" href="https://chswei.github.io/post/hugo/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": 
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": https://chswei.github.io/,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": 在 GitHub 部署 Hugo 靜態網站,
+    "name": 在 GitHub 部署 Hugo 靜態網站,
+    "wordCount": 209,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://chswei.github.io/post/hugo/,
+    "datePublished": 2018-07-12T22:36Z,
+    "dateModified": 2018-07-12T22:36Z,
+    
+    
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://chswei.github.io/post/hugo/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-122220812-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://chswei.github.io/about">About me</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://chswei.github.io/">My Blog</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://chswei.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">在 GitHub 部署 Hugo 靜態網站</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2018-07-12T22:36:43&#43;08:00">
+            Jul 12, 2018
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<p><img src="https://chswei.github.io/images/hugo/hugo-1.png" alt="hugo-1" /></p>
+
+<p>第一次搭建個人網站，選擇了 Hugo。儘管<a href="https://gohugo.io/documentation/">官方文件</a>寫得很詳細，但 Programming 新手如我在建立的過程中還是遇到了一些困難，因此紀錄一下，希望能幫到跟我同樣情況的人。</p>
+
+<p>以下分為兩部分介紹：本地建立檔案、部署到 GitHub。(使用 MacOS)</p>
+
+<h2 id="第一部分-本地建立檔案">第一部分：本地建立檔案</h2>
+
+<p>老實說 Hugo 真的很人性化，簡單幾個步驟就能讓使用者建立網站的雛形。</p>
+
+<h3 id="1-打開-terminal-安裝-homebrew">1. 打開 terminal，安裝 Homebrew</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">/usr/bin/ruby -e &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&#34;</pre></div>
+<h3 id="2-安裝-hugo">2. 安裝 Hugo</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">brew install hugo</pre></div>
+<h3 id="3-建立新網站">3. 建立新網站</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">hugo new site website-hugo
+cd website-hugo</pre></div>
+<p><code>website-hugo</code> 可以替換成任意名稱，但你也可以跟我一樣，避免麻煩。找到名為 <code>website-hugo</code> 的資料夾，觀察一下內部資料夾結構。</p>
+
+<h3 id="4-新增主題-theme-https-themes-gohugo-io-此處以-casper-https-themes-gohugo-io-casper-為例">4. 新增主題 <a href="https://themes.gohugo.io">(theme)</a>：此處以 <a href="https://themes.gohugo.io/casper/">Casper</a> 為例</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">git clone https://github.com/vjeantet/hugo-theme-casper themes/casper</pre></div>
+<p>你也可以選其他主題，進到該主題的 GitHub repo，將上面的網址改成 repo 的網址、<code>themes/casper</code> 改成 <code>themes/你的主題名稱</code>。</p>
+
+<h3 id="5-將-themes-casper-中的-static-和-layouts-資料夾複製-取代根目錄中的-static-和-layouts-資料夾">5. 將 /themes/casper 中的 static 和 layouts 資料夾複製，取代根目錄中的 static 和 layouts 資料夾</h3>
+
+<h3 id="6-建立新文章">6. 建立新文章</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">hugo new posts/my-first-post.md</pre></div>
+<p>此指令會在 <code>/content/posts</code> 資料夾中建立 <code>my-first-post.md</code>。使用任意文字編輯器打開此 markdown 文件，將 draft 改成 false，文件內容任意。以後建立文章都是以此方式。</p>
+
+<p>使用文字編輯器打開 <code>config.toml</code>，並調整內容為上面這樣。</p>
+
+<h3 id="7-編輯-config-toml">7. 編輯 config.toml</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">baseURL = &#34;https://chswei.github.io/&#34;    #改成你的GitHub帳號名稱
+languageCode = &#34;zh-tw&#34;
+title = &#34;Chswei Blog&#34;    #自由命名</pre></div>
+<h3 id="8-本地測試">8. 本地測試</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">hugo server -D</pre></div>
+<p>執行完後，在瀏覽器中輸入網址 <a href="http://localhost:1313/">http://localhost:1313/</a> ，就可以看到網站的雛形了！</p>
+
+<h2 id="第二部分-部署到-github">第二部分：部署到 GitHub</h2>
+
+<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Hugo 部署在 GitHub 的方式</a>有兩種，這邊介紹部署個人唯一主頁的方式。</p>
+
+<h3 id="1-在-github-建立兩個-repo">1. 在 GitHub 建立兩個 repo</h3>
+
+<p>在 GitHub 建立 <code>website-hugo</code> 和 <code>chswei.github.io</code> (改成自己的帳號名稱) 兩個 repo。</p>
+
+<h3 id="2-建立-public-資料夾">2. 建立 /public 資料夾</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">hugo</pre></div>
+<p>執行 <code>hugo</code>，就會在 <code>website-hugo</code> 內產生名為 <code>public</code> 的資料夾。</p>
+
+<h3 id="3-將-public-資料夾連結到-github-上的-chswei-github-io">3. 將 /public 資料夾連結到 GitHub 上的 chswei.github.io</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cd public
+git init
+git remote add origin https://github.com/chswei/chswei.github.io.git
+git add .
+git commit -m &#34;Initial commit&#34;
+git push -u origin master</pre></div>
+<h3 id="4-將整個-website-hugo-資料夾連結到-github-上的-website-hugo">4. 將整個 website-hugo 資料夾連結到 GitHub 上的 website-hugo</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cd ../
+git init
+git remote add origin https://github.com/chswei/website-hugo.git
+git add .
+git commit -m &#34;Initial commit&#34;
+git push -u origin master</pre></div>
+<p>在執行 <code>git add .</code> 時出現如下面的 warning 時不用在意</p>
+
+<p><img src="https://chswei.github.io/images/hugo/hugo-2.png" alt="hugo-2" /></p>
+
+<p>等個幾分鐘，輸入網址 <a href="https://chswei.github.io/">https://chswei.github.io/</a> 就大功告成囉！</p>
+
+<p><img src="https://chswei.github.io/images/hugo/hugo-3.png" alt="hugo-3" /></p>
+
+<h3 id="references">References:</h3>
+
+<ol>
+<li><a href="https://gohugo.io/documentation/">Hugo Documentation</a></li>
+<li><a href="https://brent-li.github.io/post/build-personal-site-with-hugo/">用Hugo搭建个人网站</a></li>
+<li><a href="https://chengjunwang.com/note/note_archive/2016-08-03-github/">Github个人网站维护</a></li>
+</ol>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+
+<section class="author">
+  <h4><a href="https://chswei.github.io/">chswei</a></h4>
+  
+  <p>Read <a href="https://chswei.github.io/">more posts</a> by this author.</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Taiwan</span>
+    <span class="author-link icon-link"><a href="https://chswei.github.io/">https://chswei.github.io/</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%e5%9c%a8%20GitHub%20%e9%83%a8%e7%bd%b2%20Hugo%20%e9%9d%9c%e6%85%8b%e7%b6%b2%e7%ab%99&nbsp;-&nbsp;Random%20Forest&amp;url=https%3a%2f%2fchswei.github.io%2fpost%2fhugo%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fchswei.github.io%2fpost%2fhugo%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fchswei.github.io%2fpost%2fhugo%2f&amp;description=%e5%9c%a8%20GitHub%20%e9%83%a8%e7%bd%b2%20Hugo%20%e9%9d%9c%e6%85%8b%e7%b6%b2%e7%ab%99"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fchswei.github.io%2fpost%2fhugo%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/chswei.github.io\/post\/hugo\/";  
+this.page.identifier = "https:\/\/chswei.github.io\/post\/hugo\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://chswei.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://chswei.github.io/post/sysargv-shell/">
+          <section class="post">
+              <h2>Python 中 sys.argv[] 配合 Shell Script 的使用方法</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Random Forest</a> All rights reserved - 2018</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://chswei.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://chswei.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://chswei.github.io/js/index.js"></script>
+    
+</body>
+</html>
+
