@@ -3,7 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://chswei.github.io/post/why_r/</loc>
+    <loc>https://chswei.github.io/post/sysargv-shell/</loc>
+    <lastmod>2018-07-12T22:25:02+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chswei.github.io/post/r-kernel-for-jupyter-notebook/</loc>
+    <lastmod>2018-07-12T21:55:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chswei.github.io/post/why-r/</loc>
     <lastmod>2018-07-12T17:08:36+08:00</lastmod>
   </url>
   
@@ -19,31 +29,37 @@
   
   <url>
     <loc>https://chswei.github.io/tags/data-science/</loc>
-    <lastmod>2018-07-12T17:08:36+08:00</lastmod>
+    <lastmod>2018-07-12T21:55:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://chswei.github.io/post/</loc>
-    <lastmod>2018-07-12T17:08:36+08:00</lastmod>
+    <lastmod>2018-07-12T22:25:02+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chswei.github.io/tags/python/</loc>
+    <lastmod>2018-07-12T22:25:02+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://chswei.github.io/tags/r/</loc>
-    <lastmod>2018-07-12T17:08:36+08:00</lastmod>
+    <lastmod>2018-07-12T21:55:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://chswei.github.io/</loc>
-    <lastmod>2018-07-12T17:08:36+08:00</lastmod>
+    <lastmod>2018-07-12T22:25:02+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://chswei.github.io/tags/</loc>
-    <lastmod>2018-07-12T17:08:36+08:00</lastmod>
+    <lastmod>2018-07-12T21:55:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   

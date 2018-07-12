@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="為什麼 R 比 MS Excel 更適合做資料分析？"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@wujiyaker"/>
+
+
+
+  	<meta property="og:title" content="為什麼 R 比 MS Excel 更適合做資料分析？ &middot; Random Forest" />
+  	<meta property="og:site_name" content="Random Forest" />
+  	<meta property="og:url" content="https://chswei.github.io/post/why-r/" />
+
+    
+        
+            <meta property="og:image" content="/images/forest.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2018-07-12T17:08:36&#43;08:00" />
+
+    
+    <meta property="article:tag" content="R" />
+    
+    <meta property="article:tag" content="Data Science" />
+    
+    
+
+    <title>為什麼 R 比 MS Excel 更適合做資料分析？ &middot; Random Forest</title>
+
+    
+    <meta name="description" content="從六月中開始放暑假後，也學了快三個月的 R 語言。有一天我爸瞄到我正在打 code，就問這是什麼。我跟他簡單解釋說 R 是一個用來進行數據處理和分析的程式語言，沒想到他反問我為什麼不用 Excel 做就好。對耶！好問題！老實說，我之前並沒有仔細想過這件事，只是覺得學了一個程式語言好酷好潮，以後如果需要統計分析時就多了一" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://chswei.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://chswei.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://chswei.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://chswei.github.io/css/nav.css" />
+
+    
+
+    
+
+    
+      
+          <link href="https://chswei.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Random Forest" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.42.2" />
+
+    <link rel="canonical" href="https://chswei.github.io/post/why-r/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": 
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": https://chswei.github.io/,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": 為什麼 R 比 MS Excel 更適合做資料分析？,
+    "name": 為什麼 R 比 MS Excel 更適合做資料分析？,
+    "wordCount": 141,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://chswei.github.io/post/why-r/,
+    "datePublished": 2018-07-12T17:08Z,
+    "dateModified": 2018-07-12T17:08Z,
+    
+    "keywords": R, Data Science,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://chswei.github.io/post/why-r/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://chswei.github.io/about">About me</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://chswei.github.io/">My Blog</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://chswei.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">為什麼 R 比 MS Excel 更適合做資料分析？</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2018-07-12T17:08:36&#43;08:00">
+            Jul 12, 2018
+          </time>
+        
+         
+          <span class="post-tag small"><a href="https://chswei.github.io//tags/r/">#R</a></span>
+         
+          <span class="post-tag small"><a href="https://chswei.github.io//tags/data-science/">#Data Science</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<p><img src="https://chswei.github.io/images/why-R/R.png" alt="R" /></p>
+
+<p>從六月中開始放暑假後，也學了快三個月的 R 語言。有一天我爸瞄到我正在打 code，就問這是什麼。我跟他簡單解釋說 R 是一個用來進行數據處理和分析的程式語言，沒想到他反問我為什麼不用 Excel 做就好。對耶！好問題！老實說，我之前並沒有仔細想過這件事，只是覺得學了一個程式語言好酷好潮，以後如果需要統計分析時就多了一個工具可以使用，如此而已。</p>
+
+<p>平常使用 Excel 的頻率也不高，最多就是會使用常見函數和樞紐分析而已，R 也只有學了短短的 70 多天，討論這個題目其實說服力有點薄弱。不過對於剛踏入資料科學領域的我來說，這確實是個值得思考的問題，藉此了解各種工具的優缺點，未來也才能合理地運用它們。</p>
+
+<p>網路上已經有不少人討論過這個問題了，但我想結合自己學習和使用的心得，以研究人員、資料科學家（而非一般人）的角度，將 R 比 Excel 優秀的部分，依據我個人有感程度分成以下八點敘述：</p>
+
+<h3 id="一-再現性-reproducibility">一、再現性 (Reproducibility)</h3>
+
+<p>某人用了某份數據做出了 A 結論，另一人也可以用相同的數據做出類似於 A 的結論，這就稱為再現性，是科學研究中十分重要的概念。
+在 R 中，包含資料的下載、讀取、清理和分析等操作，都是藉由「<strong>程式碼 (code)</strong>」執行，因此每個步驟都扎扎實實地以程式碼的形式被紀錄下來（甚至可以加上註解讓他人容易理解）。別人只要照著程式碼 run 一遍，便可得到相同的結果。而另一方面，Excel 是利用<a href="https://zh.wikipedia.org/wiki/图形用户界面">圖形使用者介面 (GUI, Graphical User Interface)</a> 進行大部分的工作，幾乎所有的操作都可以藉由「<strong>滑鼠點擊</strong>」完成（VBA 例外），雖然簡單、方便、直覺，但除非我們詳細記錄了每一個操作步驟，不然別人是很難一眼看出我們是如何進行分析而得出結果的。</p>
+
+<h3 id="二-自動化">二、自動化</h3>
+
+<p>自動化原本就是機器和電腦的優勢，R 可以讓人類教導機器，學習如何依照我們的想法，將單一且重複的工作自動完成，提升效率。當遇到相同格式的資料和數據時，我們可以使用同一份 R Script 進行處理及分析。反觀 Excel，因為是 GUI-based 的軟體，每個步驟都要經由人工點擊的方式進行，所以即使拿到同樣格式的資料，我們還是要從頭開始一步步處理。</p>
+
+<h3 id="三-開源-open-source">三、開源 (Open Source)</h3>
+
+<p>相對於微軟的付費產品 Excel，R 作為一個開源的語言，每個人都能免費下載，使用者們也可以貢獻自己的智慧結晶，將修改過或是全新的函數寫成<a href="https://cran.r-project.org/web/packages/">套件 (package)</a>，擴充 R 的功能。2017 年初，CRAN 上的套件數量尚不足一萬個，但短短幾個月，已經上升到了 11418 個（截至 2017/09/15），而這個數目還不包含 <a href="http://www.bioconductor.org/install/">Bioconductor</a> 上的套件呢，可見使用 R 的社群仍持續蓬勃發展。</p>
+
+<p><img src="https://chswei.github.io/images/why-R/packages.png" alt="packages" /></p>
+
+<h3 id="四-易於操作大型資料">四、易於操作大型資料</h3>
+
+<p>大家應該多多少少都有遇過開啟 Excel 檔時，因為資料量過於龐大而當機的狀況。在現今這個充滿數據的時代，上萬筆、甚至上百萬筆的巨量數據集隨處可見，Excel 對於這種資料的處理可能就不是這麼適合。在 R 中，數據集匯入後，它會儲存在後台，儘管我們沒辦法看到看到資料的全貌（要另外輸入其他指令），但卻能加速資料操作的效率。</p>
+
+<p>（然而不能忽略的是，R 能處理的資料大小也會受限於 RAM 的多寡。）</p>
+
+<h3 id="五-繪圖功能強大">五、繪圖功能強大</h3>
+
+<p>Excel 的繪圖功能對於一般人來說其實已經很足夠了，經過一些方法美化後其實也還能看。但對於研究人員來說，想要將分析結果發表在期刊上，Excel 做出來的圖表還是力有未逮。而 R 的繪圖功能可以用「extraordinary」來形容，也許是因為 R 本來就大多是專業研究人員在使用吧。內建的繪圖函數已經十分優秀，另外又有人開發出 lattice 和 ggplot2 等套件，讓使用者能夠客製化自己想要的圖表，讓繪圖變得更容易且美觀。</p>
+
+<p><img src="https://chswei.github.io/images/why-R/ggplot2.png" alt="ggplot2" /></p>
+
+<h3 id="六-可以讀取多種檔案格式">六、可以讀取多種檔案格式</h3>
+
+<p>就我所知，Excel 只能開啟 xlsx、csv 和 txt 格式的檔案，但 R 除了這些格式之外，只要運用他人開發出來的套件，就能開啟如 json、xml、html 等格式的檔案。而通常 Open Data 或是網路爬蟲取得的資料也會是 csv、json 或 xml 的格式，此時 Excel 只有乾瞪眼的份。</p>
+
+<h3 id="七-統計方法強大">七、統計方法強大</h3>
+
+<p>R 當初就是為了統計分析而開發出來的語言，也因此有許多 Excel 中沒有的進階統計方法，這對於研究人員來說是個不能忽視的部分。</p>
+
+<p>（我統計太弱，寫不出什麼東西 XD）</p>
+
+<h3 id="八-版本控制">八、版本控制</h3>
+
+<p>有時候我們會需要和他人協作專案，此時<a href="https://zh.m.wikipedia.org/zh-tw/版本控制">版本控制</a>就顯得很重要了。使用 <a href="https://git-scm.com">Git</a> 能讓我們對資料夾進行版本控制。除了可以追蹤每個人更動的地方，它甚至可以回溯之前的版本，使錯誤發生時能即時挽回。而這個部分是 Excel 望塵莫及的。</p>
+
+<hr />
+
+<h3 id="那-excel-什麼時候能派上用場">那 Excel 什麼時候能派上用場？</h3>
+
+<p>說了這麼多 R 的優點，那我們是不是可以摒棄 Excel 了呢？好像也不是這樣。我認為若想要對手上資料有個初步認識時，Excel 能讓我們很快速地看到資料長怎麼樣，方便我們規劃後續操作。更現實一點的問題是，R 是個程式語言，學習曲線較陡峭， 如果不是需要進行學術研究或是工作上需要，一般人應該也沒有理由去學。</p>
+
+<p>畢竟 Excel 的試算表 (speadsheet) 歷經了時間的考驗仍為多數人所使用，表示它還是不失為一個好設計，讓一般人能夠處理、分析資料，將結果視覺化呈現，使人了解資料背後的意義。正所謂「能捉老鼠的都是好貓」，不論是 R 還是 Excel，只要能根據不同狀況使用，幫助我們順利完成工作，那不都是好工具嗎？</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+
+<section class="author">
+  <h4><a href="https://chswei.github.io/">chswei</a></h4>
+  
+  <p>Read <a href="https://chswei.github.io/">more posts</a> by this author.</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Taiwan</span>
+    <span class="author-link icon-link"><a href="https://chswei.github.io/">https://chswei.github.io/</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%e7%82%ba%e4%bb%80%e9%ba%bc%20R%20%e6%af%94%20MS%20Excel%20%e6%9b%b4%e9%81%a9%e5%90%88%e5%81%9a%e8%b3%87%e6%96%99%e5%88%86%e6%9e%90%ef%bc%9f&nbsp;-&nbsp;Random%20Forest&amp;url=https%3a%2f%2fchswei.github.io%2fpost%2fwhy-r%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fchswei.github.io%2fpost%2fwhy-r%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fchswei.github.io%2fpost%2fwhy-r%2f&amp;description=%e7%82%ba%e4%bb%80%e9%ba%bc%20R%20%e6%af%94%20MS%20Excel%20%e6%9b%b4%e9%81%a9%e5%90%88%e5%81%9a%e8%b3%87%e6%96%99%e5%88%86%e6%9e%90%ef%bc%9f"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fchswei.github.io%2fpost%2fwhy-r%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/chswei.github.io\/post\/why-r\/";  
+this.page.identifier = "https:\/\/chswei.github.io\/post\/why-r\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://chswei.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="https://chswei.github.io/post/r-kernel-for-jupyter-notebook/">
+          <section class="post">
+              <h2>在 Jupyter Notebook 上安裝 R (Windows 10)</h2>
+              
+          </section>
+      </a>
+  
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Random Forest</a> All rights reserved - 2018</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://chswei.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://chswei.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://chswei.github.io/js/index.js"></script>
+    
+</body>
+</html>
+

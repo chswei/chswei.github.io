@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="Python 中 sys.argv[] 配合 Shell Script 的使用方法"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@wujiyaker"/>
+
+
+
+  	<meta property="og:title" content="Python 中 sys.argv[] 配合 Shell Script 的使用方法 &middot; Random Forest" />
+  	<meta property="og:site_name" content="Random Forest" />
+  	<meta property="og:url" content="https://chswei.github.io/post/sysargv-shell/" />
+
+    
+        
+            <meta property="og:image" content="/images/forest.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2018-07-12T22:25:02&#43;08:00" />
+
+    
+    <meta property="article:tag" content="Python" />
+    
+    
+
+    <title>Python 中 sys.argv[] 配合 Shell Script 的使用方法 &middot; Random Forest</title>
+
+    
+    <meta name="description" content="最近在寫李宏毅老師的 ML 課程作業時，第一次接觸了shell script，也終於弄懂 sys.argv[] 的用法。過程中看了網路上許多參考資料的介紹，總覺得對於我這個新手來說太過複雜，故在此稍作整理並紀錄。
+第一步：建立含有 sys.argv[] 的 .py 文件 使用任意文字編輯器建立 .py 文件，如圖中的 " />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://chswei.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://chswei.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://chswei.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://chswei.github.io/css/nav.css" />
+
+    
+
+    
+
+    
+      
+          <link href="https://chswei.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Random Forest" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.42.2" />
+
+    <link rel="canonical" href="https://chswei.github.io/post/sysargv-shell/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": 
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": https://chswei.github.io/,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": Python 中 sys.argv[] 配合 Shell Script 的使用方法,
+    "name": Python 中 sys.argv[] 配合 Shell Script 的使用方法,
+    "wordCount": 115,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://chswei.github.io/post/sysargv-shell/,
+    "datePublished": 2018-07-12T22:25Z,
+    "dateModified": 2018-07-12T22:25Z,
+    
+    "keywords": Python,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://chswei.github.io/post/sysargv-shell/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://chswei.github.io/about">About me</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://chswei.github.io/">My Blog</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://chswei.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Python 中 sys.argv[] 配合 Shell Script 的使用方法</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2018-07-12T22:25:02&#43;08:00">
+            Jul 12, 2018
+          </time>
+        
+         
+          <span class="post-tag small"><a href="https://chswei.github.io//tags/python/">#Python</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<p>最近在寫李宏毅老師的 <a href="https://ntumlta.github.io/2017fall-ml-hw2/">ML 課程作業</a>時，第一次接觸了shell script，也終於弄懂 sys.argv[] 的用法。過程中看了網路上許多參考資料的介紹，總覺得對於我這個新手來說太過複雜，故在此稍作整理並紀錄。</p>
+
+<h3 id="第一步-建立含有-sys-argv-的-py-文件">第一步：建立含有 sys.argv[] 的 .py 文件</h3>
+
+<p><img src="https://chswei.github.io/images/sysargv-shell/shell-1.png" alt="shell-1" /></p>
+
+<p>使用任意文字編輯器建立 .py 文件，如圖中的 test_code.py。</p>
+
+<h3 id="第二步-建立-sh-文件">第二步：建立 .sh 文件</h3>
+
+<p><img src="https://chswei.github.io/images/sysargv-shell/shell-2.png" alt="shell-2" /></p>
+
+<p>在 terminal 或 cmd 輸入以下指令：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">touch shell_name</pre></div>
+<p>touch 指令可以建立新的 .sh 文件，後面接你要的文件名稱，如圖中的 test_shell（注意這邊不用打副檔名 .sh）。</p>
+
+<p>好的，到目前為止，資料夾中已有兩個檔案：test_code.py 和 test_shell.sh</p>
+
+<p><img src="https://chswei.github.io/images/sysargv-shell/shell-3.png" alt="shell-3" /></p>
+
+<p>接下來我們要在 test_shell.sh 中打一些東西：</p>
+
+<p><img src="https://chswei.github.io/images/sysargv-shell/shell-4.png" alt="shell-4" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>python3 your_code.py $1...</pre></div>
+<ol>
+<li>#!/bin/bash 這行告訴系統以 bash（一種 shell）執行這個 .sh 檔。</li>
+<li>python3 後面接要執行的 .py 文件，再後面接 $1、$2 … ，看你 .py 中 sys.argv[] 數字到多少就打到多少，因為 $1 之後會對應 sys.argv[1]、$2 會對應 sys.argv[2] … 以此類推。</li>
+</ol>
+
+<h3 id="第三步-傳遞參數-passing-arguments">第三步：傳遞參數 (passing arguments)</h3>
+
+<p><img src="https://chswei.github.io/images/sysargv-shell/shell-5.png" alt="shell-5" /></p>
+
+<p>在 terminal 或 cmd 輸入以下指令：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sh ./shell_name arg1 arg2</pre></div>
+<p>sh 後面接 .sh 文件的路徑，再後面接你要傳遞給 sys.argv[1] 和 sys.argv[2] 的參數。<strong>也就是說，terminal 中的 arg1 傳遞參數給 .sh 文件中的 $1，$1 再傳遞給 .py 文件中的 sys.argv[1]。</strong></p>
+
+<p>那你可能會想，那 sys.argv[0] 呢？答案就在上面的輸出結果中。</p>
+
+<p>沒錯，sys.argv[0] 就是 test_shell.sh 中執行的 <strong>.py 文件名稱</strong> (test_code.py)</p>
+
+<h4 id="references">References</h4>
+
+<ol>
+<li><a href="https://www.cnblogs.com/aland-1415/p/6613449.html">Python中 sys.argv[]的用法简明解释</a></li>
+<li><a href="https://docs.google.com/presentation/d/1nOJkDRXDdORwkwibzX55w7jGOyB-rPjCOeRpwaZ82as/edit#slide=id.g1d460c2d77_0_60">李宏毅老師 ML 課程 HW2 TA Hour Slide</a></li>
+</ol>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+
+<section class="author">
+  <h4><a href="https://chswei.github.io/">chswei</a></h4>
+  
+  <p>Read <a href="https://chswei.github.io/">more posts</a> by this author.</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Taiwan</span>
+    <span class="author-link icon-link"><a href="https://chswei.github.io/">https://chswei.github.io/</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Python%20%e4%b8%ad%20sys.argv%5b%5d%20%e9%85%8d%e5%90%88%20Shell%20Script%20%e7%9a%84%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95&nbsp;-&nbsp;Random%20Forest&amp;url=https%3a%2f%2fchswei.github.io%2fpost%2fsysargv-shell%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fchswei.github.io%2fpost%2fsysargv-shell%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fchswei.github.io%2fpost%2fsysargv-shell%2f&amp;description=Python%20%e4%b8%ad%20sys.argv%5b%5d%20%e9%85%8d%e5%90%88%20Shell%20Script%20%e7%9a%84%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fchswei.github.io%2fpost%2fsysargv-shell%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/chswei.github.io\/post\/sysargv-shell\/";  
+this.page.identifier = "https:\/\/chswei.github.io\/post\/sysargv-shell\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://chswei.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://chswei.github.io/post/r-kernel-for-jupyter-notebook/">
+          <section class="post">
+              <h2>在 Jupyter Notebook 上安裝 R (Windows 10)</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Random Forest</a> All rights reserved - 2018</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://chswei.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://chswei.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://chswei.github.io/js/index.js"></script>
+    
+</body>
+</html>
+

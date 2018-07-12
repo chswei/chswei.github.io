@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>All rights reserved - 2018</copyright>
-    <lastBuildDate>Thu, 12 Jul 2018 17:08:36 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 12 Jul 2018 21:55:00 +0800</lastBuildDate>
     
 	<atom:link href="https://chswei.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,16 +15,25 @@
     <item>
       <title>Data Science</title>
       <link>https://chswei.github.io/tags/data-science/</link>
-      <pubDate>Thu, 12 Jul 2018 17:08:36 +0800</pubDate>
+      <pubDate>Thu, 12 Jul 2018 21:55:00 +0800</pubDate>
       
       <guid>https://chswei.github.io/tags/data-science/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Python</title>
+      <link>https://chswei.github.io/tags/python/</link>
+      <pubDate>Thu, 12 Jul 2018 22:25:02 +0800</pubDate>
+      
+      <guid>https://chswei.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>R</title>
       <link>https://chswei.github.io/tags/r/</link>
-      <pubDate>Thu, 12 Jul 2018 17:08:36 +0800</pubDate>
+      <pubDate>Thu, 12 Jul 2018 21:55:00 +0800</pubDate>
       
       <guid>https://chswei.github.io/tags/r/</guid>
       <description></description>
