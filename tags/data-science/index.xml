@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Random Forest</title>
-    <link>https://chswei.github.io/post/</link>
-    <description>Recent content in Posts on Random Forest</description>
+    <title>Data Science on Random Forest</title>
+    <link>https://chswei.github.io/tags/data-science/</link>
+    <description>Recent content in Data Science on Random Forest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>All rights reserved - 2018</copyright>
     <lastBuildDate>Thu, 12 Jul 2018 17:08:36 +0800</lastBuildDate>
     
-	<atom:link href="https://chswei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://chswei.github.io/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -25,15 +25,6 @@
 二、自動化 自動化原本就是機器和電腦的優勢，R 可以讓人類教導機器，學習如何依照我們的想法，將單一且重複的工作自動完成，提升效率。當遇到相同格式的資料和數據時，我們可以使用同一份 R Script 進行處理及分析。反觀 Excel，因為是 GUI-based 的軟體，每個步驟都要經由人工點擊的方式進行，所以即使拿到同樣格式的資料，我們還是要從頭開始一步步處理。
 三、開源 (Open Source) 相對於微軟的付費產品 Excel，R 作為一個開源的語言，每個人都能免費下載，使用者們也可以貢獻自己的智慧結晶，將修改過或是全新的函數寫成套件 (package)，擴充 R 的功能。2017 年初，CRAN 上的套件數量尚不足一萬個，但短短幾個月，已經上升到了 11418 個（截至 2017/09/15），而這個數目還不包含 Bioconductor 上的套件呢，可見使用 R 的社群仍持續蓬勃發展。
 四、易於操作大型資料 大家應該多多少少都有遇過開啟 Excel 檔時，因為資料量過於龐大而當機的狀況。在現今這個充滿數據的時代，上萬筆、甚至上百萬筆的巨量數據集隨處可見，Excel 對於這種資料的處理可能就不是這麼適合。在 R 中，數據集匯入後，它會儲存在後台，儘管我們沒辦法看到看到資料的全貌（要另外輸入其他指令），但卻能加速資料操作的效率。</description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://chswei.github.io/post/test/</link>
-      <pubDate>Mon, 09 Jul 2018 21:48:35 +0800</pubDate>
-      
-      <guid>https://chswei.github.io/post/test/</guid>
-      <description>測試測試 This is a testing article.</description>
     </item>
     
   </channel>
