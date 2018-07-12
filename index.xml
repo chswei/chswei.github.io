@@ -33,16 +33,8 @@
       <pubDate>Wed, 11 Jul 2018 23:21:12 +0800</pubDate>
       
       <guid>https://chswei.github.io/about/</guid>
-      <description>醫學生，最近對資料科學產生興趣。 Medical student, interested in data science recently.</description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://chswei.github.io/post/test/</link>
-      <pubDate>Mon, 09 Jul 2018 21:48:35 +0800</pubDate>
-      
-      <guid>https://chswei.github.io/post/test/</guid>
-      <description>測試測試 This is a testing article.</description>
+      <description>醫學生，最近對資料科學產生興趣。
+Medical student, interested in data science recently.</description>
     </item>
     
   </channel>

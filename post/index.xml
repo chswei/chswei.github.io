@@ -27,14 +27,5 @@
 四、易於操作大型資料 大家應該多多少少都有遇過開啟 Excel 檔時，因為資料量過於龐大而當機的狀況。在現今這個充滿數據的時代，上萬筆、甚至上百萬筆的巨量數據集隨處可見，Excel 對於這種資料的處理可能就不是這麼適合。在 R 中，數據集匯入後，它會儲存在後台，儘管我們沒辦法看到看到資料的全貌（要另外輸入其他指令），但卻能加速資料操作的效率。</description>
     </item>
     
-    <item>
-      <title>Test</title>
-      <link>https://chswei.github.io/post/test/</link>
-      <pubDate>Mon, 09 Jul 2018 21:48:35 +0800</pubDate>
-      
-      <guid>https://chswei.github.io/post/test/</guid>
-      <description>測試測試 This is a testing article.</description>
-    </item>
-    
   </channel>
 </rss>
