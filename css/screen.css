@@ -283,7 +283,7 @@ h4, h5, h6 {
     color: #2E2E2E;
     line-height: 1.15em;
     margin: 0 0 0.4em 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Noto Sans", sans-serif;
     text-rendering: geometricPrecision;
 }
 
@@ -610,7 +610,7 @@ body.nav-opened .site-wrapper {
 
 .main-nav a {
     text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 /* Navigation */
@@ -953,7 +953,7 @@ body.nav-opened .menu-button .word {
     font-size: 5rem;
     letter-spacing: -1px;
     font-weight: 700;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Noto Sans", sans-serif;
     color: #fff;
 }
 
@@ -1038,11 +1038,14 @@ body:not(.post-template) .post-title {
 
 .post-title a {
     text-decoration: none;
+    color: rgb(79, 133, 133);
 }
 
 .post-excerpt p {
     margin: 0;
     font-size: 0.9em;
+    font-weight: 10;
+    color: #666;
     line-height: 1.7em;
 }
 
@@ -1053,7 +1056,7 @@ body:not(.post-template) .post-title {
 .post-meta {
     display: block;
     margin: 1.75rem 0 0 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Noto Sans", sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
     color: #9EABB3;
@@ -1427,7 +1430,7 @@ body:not(.post-template) .post-title {
     width: 80%;
     max-width: 710px;
     margin: 4rem auto;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Noto Sans", sans-serif;
     font-size: 1.3rem;
     color: #9EABB3;
     text-align: center;
@@ -1512,7 +1515,7 @@ body:not(.post-template) .post-title {
     margin: 8rem 0 0 0;
     padding: 0.5rem 15px;
     /*border-top: #EBF2F6 1px solid;*/
-    font-family: "Open Sans", sans-serif;
+    font-family: "Noto Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.75em;
     color: #BBC7CC;
@@ -2047,7 +2050,7 @@ body:not(.post-template) .post-title {
     padding: 4px 10px 5px;
     text-transform: uppercase;
     font-size: 1.1rem;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Noto Sans", sans-serif;
     color: rgba(255,255,255,0.8);
     border: rgba(255,255,255,0.5) 1px solid;
     border-radius: 4px;
