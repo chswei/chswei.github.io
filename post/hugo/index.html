@@ -217,22 +217,22 @@
 <p>老實說 Hugo 真的很人性化，簡單幾個步驟就能讓使用者建立網站的雛形。</p>
 
 <h3 id="1-打開-terminal-安裝-homebrew">1. 打開 terminal，安裝 Homebrew</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">/usr/bin/ruby -e &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&#34;</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">/usr/bin/ruby -e <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span></code></pre></div>
 <h3 id="2-安裝-hugo">2. 安裝 Hugo</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">brew install hugo</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">brew install hugo</code></pre></div>
 <h3 id="3-建立新網站">3. 建立新網站</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">hugo new site website-hugo
-cd website-hugo</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">hugo new site website-hugo
+cd website-hugo</code></pre></div>
 <p><code>website-hugo</code> 可以替換成任意名稱，但你也可以跟我一樣，避免麻煩。找到名為 <code>website-hugo</code> 的資料夾，觀察一下內部資料夾結構。</p>
 
 <h3 id="4-新增主題-theme-https-themes-gohugo-io-此處以-casper-https-themes-gohugo-io-casper-為例">4. 新增主題 <a href="https://themes.gohugo.io">(theme)</a>：此處以 <a href="https://themes.gohugo.io/casper/">Casper</a> 為例</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">git clone https://github.com/vjeantet/hugo-theme-casper themes/casper</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">git clone https://github.com/vjeantet/hugo-theme-casper themes/casper</code></pre></div>
 <p>你也可以選其他主題，進到該主題的 GitHub repo，將上面的網址改成 repo 的網址、<code>themes/casper</code> 改成 <code>themes/你的主題名稱</code>。</p>
 
 <h3 id="5-將-themes-casper-中的-static-和-layouts-資料夾複製-取代根目錄中的-static-和-layouts-資料夾">5. 將 /themes/casper 中的 static 和 layouts 資料夾複製，取代根目錄中的 static 和 layouts 資料夾</h3>
 
 <h3 id="6-建立新文章">6. 建立新文章</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">hugo new posts/my-first-post.md</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">hugo new posts/my-first-post.md</code></pre></div>
 <p>此指令會在 <code>/content/posts</code> 資料夾中建立 <code>my-first-post.md</code>。使用任意文字編輯器打開此 markdown 文件，將 draft 改成 false，文件內容任意。以後建立文章都是以此方式。</p>
 
 <p>使用文字編輯器打開 <code>config.toml</code>，並調整內容為上面這樣。</p>
@@ -242,7 +242,7 @@ cd website-hugo</pre></div>
 languageCode = &#34;zh-tw&#34;
 title = &#34;Chswei Blog&#34;    #自由命名</pre></div>
 <h3 id="8-本地測試">8. 本地測試</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">hugo server -D</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">hugo server -D</code></pre></div>
 <p>執行完後，在瀏覽器中輸入網址 <a href="http://localhost:1313/">http://localhost:1313/</a> ，就可以看到網站的雛形了！</p>
 
 <h2 id="第二部分-部署到-github">第二部分：部署到 GitHub</h2>
@@ -254,23 +254,23 @@ title = &#34;Chswei Blog&#34;    #自由命名</pre></div>
 <p>在 GitHub 建立 <code>website-hugo</code> 和 <code>chswei.github.io</code> (改成自己的帳號名稱) 兩個 repo。</p>
 
 <h3 id="2-建立-public-資料夾">2. 建立 /public 資料夾</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">hugo</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">hugo</code></pre></div>
 <p>執行 <code>hugo</code>，就會在 <code>website-hugo</code> 內產生名為 <code>public</code> 的資料夾。</p>
 
 <h3 id="3-將-public-資料夾連結到-github-上的-chswei-github-io">3. 將 /public 資料夾連結到 GitHub 上的 chswei.github.io</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cd public
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">cd public
 git init
 git remote add origin https://github.com/chswei/chswei.github.io.git
 git add .
-git commit -m &#34;Initial commit&#34;
-git push -u origin master</pre></div>
+git commit -m <span style="color:#e6db74">&#34;Initial commit&#34;</span>
+git push -u origin master</code></pre></div>
 <h3 id="4-將整個-website-hugo-資料夾連結到-github-上的-website-hugo">4. 將整個 website-hugo 資料夾連結到 GitHub 上的 website-hugo</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cd ../
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">cd ../
 git init
 git remote add origin https://github.com/chswei/website-hugo.git
 git add .
-git commit -m &#34;Initial commit&#34;
-git push -u origin master</pre></div>
+git commit -m <span style="color:#e6db74">&#34;Initial commit&#34;</span>
+git push -u origin master</code></pre></div>
 <p>在執行 <code>git add .</code> 時出現如下面的 warning 時不用在意</p>
 
 <p><img src="https://chswei.github.io/images/hugo/hugo-2.png" alt="hugo-2" /></p>

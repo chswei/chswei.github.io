@@ -1047,6 +1047,10 @@ body:not(.post-template) .post-title {
     font-weight: 10;
     color: #666;
     line-height: 1.7em;
+    
+    display: block;
+    max-height: 8.5em;
+    overflow: hidden;
 }
 
 .read-more {

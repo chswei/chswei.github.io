@@ -229,8 +229,8 @@
 <h3 id="此路不通-not-work-for-me">此路不通 (Not Work for Me)</h3>
 
 <p>一開始我按照<a href="http://white5168.blogspot.com/2017/09/anaconda-rpythonr.html#.W0dfsWb3X-b">這個網站</a>的步驟操作，在 Anaconda Prompt 內打入：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">conda update anaconda
-conda install -c r r-essentials</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">conda update anaconda
+conda install -c r r-essentials</code></pre></div>
 <p>在筆電和桌電上試驗都在第二步出現了 Error，沒辦法安裝，查了 google 和 stackoverflow 都找不到解答。（不過好多東西我都看不懂，所以也有可能是有解的。）之後還在 YouTube 看別人怎麼安裝，但對我來說還是不成功。</p>
 
 <h3 id="解法-my-solution">解法 (My Solution)</h3>
@@ -240,12 +240,12 @@ conda install -c r r-essentials</pre></div>
 <h4 id="step-1">Step 1</h4>
 
 <p>在 RStudio 的 Console 內打入：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">install.packages(c(&#39;repr&#39;, &#39;IRdisplay&#39;, &#39;evaluate&#39;, &#39;crayon&#39;, &#39;pbdZMQ&#39;, &#39;devtools&#39;, &#39;uuid&#39;, &#39;digest&#39;)) 
-devtools::install_github(&#39;IRkernel/IRkernel&#39;)</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">install.packages(<span style="color:#66d9ef">c</span>(<span style="color:#e6db74">&#39;repr&#39;</span>, <span style="color:#e6db74">&#39;IRdisplay&#39;</span>, <span style="color:#e6db74">&#39;evaluate&#39;</span>, <span style="color:#e6db74">&#39;crayon&#39;</span>, <span style="color:#e6db74">&#39;pbdZMQ&#39;</span>, <span style="color:#e6db74">&#39;devtools&#39;</span>, <span style="color:#e6db74">&#39;uuid&#39;</span>, <span style="color:#e6db74">&#39;digest&#39;</span>)) 
+devtools<span style="color:#f92672">::</span>install_github(<span style="color:#e6db74">&#39;IRkernel/IRkernel&#39;</span>)</code></pre></div>
 <h4 id="step-2-wrong">Step 2 (Wrong)</h4>
 
 <p>在 RStudio 中的 Console 內打入：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">IRkernel::installspec()</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">IRkernel<span style="color:#f92672">::</span>installspec()</code></pre></div>
 <p>結果出現 Error：</p>
 
 <p><img src="https://chswei.github.io/images/r-kernel-for-jupyter-notebook/IRkernel-2.png" alt="IRkernel-2" /></p>
@@ -255,20 +255,20 @@ devtools::install_github(&#39;IRkernel/IRkernel&#39;)</pre></div>
 <h4 id="step-2-correct">Step 2 (Correct)</h4>
 
 <p>打開 Anaconda Prompt (或是用 Windows 內建的 cmd 好像也可以)，更改路徑到裝有 R.exe 的資料夾 (以下是我的路徑)：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cd &#34;C:\Program Files\R\R-3.4.1\bin&#34;</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">cd <span style="color:#e6db74">&#34;C:\Program Files\R\R-3.4.1\bin&#34;</span></code></pre></div>
 <p><img src="https://chswei.github.io/images/r-kernel-for-jupyter-notebook/IRkernel-3.png" alt="IRkernel-3" /></p>
 
 <p>接著打入這行，進入 R。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">R.exe</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">R.exe</code></pre></div>
 <p>重新打入剛剛在 RStudio 中失敗的這行：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">IRkernel::installspec()</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">IRkernel<span style="color:#f92672">::</span>installspec()</code></pre></div>
 <p>沒有出現錯誤！！！先關掉 R，不用儲存空間圖案：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">q()</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#66d9ef">q</span>()</code></pre></div>
 <h4 id="step-3">Step 3</h4>
 
 <p>先回到你想要的路徑，再打開 Jupyter Notebook：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cd &#34;你的某資料夾&#34;
-jupyter notebook</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">cd <span style="color:#e6db74">&#34;你的某資料夾&#34;</span>
+jupyter notebook</code></pre></div>
 <p>出現 R 的選項了！！！</p>
 
 <p><img src="https://chswei.github.io/images/r-kernel-for-jupyter-notebook/IRkernel-4.png" alt="IRkernel-4" /></p>

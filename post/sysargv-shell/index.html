@@ -222,7 +222,7 @@
 <p><img src="https://chswei.github.io/images/sysargv-shell/shell-2.png" alt="shell-2" /></p>
 
 <p>在 terminal 或 cmd 輸入以下指令：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">touch shell_name</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">touch shell_name</code></pre></div>
 <p>touch 指令可以建立新的 .sh 文件，後面接你要的文件名稱，如圖中的 test_shell（注意這邊不用打副檔名 .sh）。</p>
 
 <p>好的，到目前為止，資料夾中已有兩個檔案：test_code.py 和 test_shell.sh</p>
@@ -232,8 +232,8 @@
 <p>接下來我們要在 test_shell.sh 中打一些東西：</p>
 
 <p><img src="https://chswei.github.io/images/sysargv-shell/shell-4.png" alt="shell-4" /></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><span style="color:#75715e">#!/bin/bash
-</span><span style="color:#75715e"></span>python3 your_code.py $1...</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>python3 your_code.py $1...</code></pre></div>
 <ol>
 <li>#!/bin/bash 這行告訴系統以 bash（一種 shell）執行這個 .sh 檔。</li>
 <li>python3 後面接要執行的 .py 文件，再後面接 $1、$2 … ，看你 .py 中 sys.argv[] 數字到多少就打到多少，因為 $1 之後會對應 sys.argv[1]、$2 會對應 sys.argv[2] … 以此類推。</li>
@@ -244,7 +244,7 @@
 <p><img src="https://chswei.github.io/images/sysargv-shell/shell-5.png" alt="shell-5" /></p>
 
 <p>在 terminal 或 cmd 輸入以下指令：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sh ./shell_name arg1 arg2</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">sh ./shell_name arg1 arg2</code></pre></div>
 <p>sh 後面接 .sh 文件的路徑，再後面接你要傳遞給 sys.argv[1] 和 sys.argv[2] 的參數。<strong>也就是說，terminal 中的 arg1 傳遞參數給 .sh 文件中的 $1，$1 再傳遞給 .py 文件中的 sys.argv[1]。</strong></p>
 
 <p>那你可能會想，那 sys.argv[0] 呢？答案就在上面的輸出結果中。</p>
