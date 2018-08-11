@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Diary on Random Forest</title>
+    <link>https://chswei.github.io/diary/</link>
+    <description>Recent content in Diary on Random Forest</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <copyright>Copyright © 2018</copyright>
+    <lastBuildDate>Sun, 05 Aug 2018 23:40:59 +0800</lastBuildDate>
+    
+	<atom:link href="https://chswei.github.io/diary/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>新篇章</title>
+      <link>https://chswei.github.io/diary/180805/</link>
+      <pubDate>Sun, 05 Aug 2018 23:40:59 +0800</pubDate>
+      
+      <guid>https://chswei.github.io/diary/180805/</guid>
+      <description>最近生活有一些想法和心得，但還不到寫成完整文章的程度，又不適合放在 Twitter，所以有了寫短篇日記的念頭。每篇可能幾十個字之類的，希望這個方式能讓自己比較有動力寫下去，畢竟長文寫起來很累啊！</description>
+    </item>
+    
+  </channel>
+</rss>

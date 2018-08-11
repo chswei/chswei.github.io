@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="關於讀書方法"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@wujiyaker"/>
+
+
+
+  	<meta property="og:title" content="關於讀書方法 &middot; Random Forest" />
+  	<meta property="og:site_name" content="Random Forest" />
+  	<meta property="og:url" content="https://chswei.github.io/post/study-methods/" />
+
+    
+        
+            <meta property="og:image" content="/images/forest.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2018-08-11T17:52:21&#43;08:00" />
+
+    
+    <meta property="article:tag" content="Study" />
+    
+    
+
+    <title>關於讀書方法 &middot; Random Forest</title>
+
+    
+    <meta name="description" content="還記得以前國中的時候老師要我上台跟同學分享讀書方法，當時說不出所以然，反正把課本多念幾遍就是了。這麼多年過去了，讀書方法一直沒什麼改變，考前預留一段足夠的時間開始複習，用螢光筆在課本或共筆上劃線做記號，有多餘的時間就做點筆記統整，然後至少把上課內容看兩遍，再寫寫考古題，成績就能保持在不錯的水準。因此也沒有特別想要去改進" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://chswei.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://chswei.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://chswei.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://chswei.github.io/css/nav.css" />
+
+    
+
+    
+
+    
+      
+          <link href="https://chswei.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Random Forest" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.42.2" />
+
+    <link rel="canonical" href="https://chswei.github.io/post/study-methods/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": 
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": https://chswei.github.io/,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": 關於讀書方法,
+    "name": 關於讀書方法,
+    "wordCount": 59,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://chswei.github.io/post/study-methods/,
+    "datePublished": 2018-08-11T17:52Z,
+    "dateModified": 2018-08-11T17:52Z,
+    
+    "keywords": Study,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://chswei.github.io/post/study-methods/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-122220812-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://chswei.github.io/about">About Me</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://chswei.github.io/">My Blog</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://chswei.github.io/diary">Short Diary</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://chswei.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">關於讀書方法</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2018-08-11T17:52:21&#43;08:00">
+            Aug 11, 2018
+          </time>
+        
+         
+          <span class="post-tag small"><a href="https://chswei.github.io//tags/study/">#Study</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<p><img src="https://chswei.github.io/images/study-tips/Ali.jpg" alt="Ali" /></p>
+
+<p>還記得以前國中的時候老師要我上台跟同學分享讀書方法，當時說不出所以然，反正把課本多念幾遍就是了。這麼多年過去了，讀書方法一直沒什麼改變，考前預留一段足夠的時間開始複習，用螢光筆在課本或共筆上劃線做記號，有多餘的時間就做點筆記統整，然後至少把上課內容看兩遍，再寫寫考古題，成績就能保持在不錯的水準。因此也沒有特別想要去改進讀書方法。然而這種螢光筆劃線式的方法看似有效率，實際上內容完全沒有吸收進腦中，而且忘得很快，每次在生活中看到自己曾經學過的東西總會很興奮地跟旁人說「啊這個我學過耶」，但馬上又因為記憶模糊而支支吾吾地帶過，屢試不爽。</p>
+
+<p>今年寒假在 Coursera 參加一門叫作 <a href="https://www.coursera.org/learn/learning-how-to-learn">Learning How to Learn</a> 的熱門課程，老師們以記憶形成的理論一步步教導該如何正確地學習，但後來我覺得講得太枯燥，所以並沒有看完所有的影片，也沒有認真應用在課業上 (好浪費XD)。然後最近發現一位叫作 <a href="https://www.youtube.com/channel/UCoOae5nYA7VqaXzerajD0lg">Ali Abdaal</a> 的 YouTuber。他是英國劍橋大學醫學院的學生，影片品質和可看度都還蠻高的，而其中一系列 <a href="https://www.youtube.com/playlist?list=PL7BImOT2srcGCCjBBwNvU5zaB9F30lWye">Study Tips</a> 的影片真的讓我獲益良多，尤其醫學背景對我來說更具參考性。</p>
+
+<p>這邊先列出影片中最重要的兩個方法：active recall 和 spaced repetition。</p>
+
+<h2 id="active-recall">Active Recall</h2>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/ukLnPbIffxE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>Active Recall 顧名思義就是回想學習的內容。例如可以回想並總結今天所學的大架構是如何，然後這些大架構下面有哪些細節等。<strong>這種從大腦提取記憶的過程能讓記憶更牢固、更長久。</strong>一直以來因為我念書速度很慢，看完一個單元需要花很多時間，所以每次做完螢光筆的劃記就會懶得再耗神回想，但就是這種壞習慣讓我的記憶很不穩固，考完試就忘。</p>
+
+<p>此外，也可以搭配畫簡圖、心智圖等方式進行 active recall，畢竟我們對於圖像記憶比較拿手，也順便讓自己在回想的時候理清思緒。但無論使用何種方式，重點都是在那<strong>提取記憶的過程</strong>。</p>
+
+<h2 id="spaced-repetition">Spaced Repetition</h2>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/Z-zNHHpXoMM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>Spaced Repetition (間隔重複) 其實就是耳熟能詳的<a href="https://zh.wikipedia.org/wiki/遗忘曲线">遺忘曲線</a>的應用。由於我們的短期記憶會隨著時間漸漸地遺忘，所以需要每隔一段時間進行複習來加強記憶，直到它成為長期記憶。結合前面說到的 active recall，我們可以每隔幾天就回想之前學過的內容 (而非重看螢光筆劃線的地方)，如此就能鞏固記憶。</p>
+
+<p>有一些 App 可以幫助我們進行 spaced repetition (如 Anki 和 Quizlet)，其中 <a href="https://apps.ankiweb.net">Anki</a> 是 Ali 極其推薦的，有興趣的人可以搜尋看看。</p>
+
+<hr />
+
+<p>這兩個讀書方法的好處在於不需要任何訓練，人人都可以很快上手，而且它們是從記憶的形成原理著手，所以適用於任何科目。So why not give it a try?</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+
+<section class="author">
+  <h4><a href="https://chswei.github.io/">chswei</a></h4>
+  
+  <p>Read <a href="https://chswei.github.io/">more posts</a> by this author.</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Taiwan</span>
+    <span class="author-link icon-link"><a href="https://chswei.github.io/">https://chswei.github.io/</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%e9%97%9c%e6%96%bc%e8%ae%80%e6%9b%b8%e6%96%b9%e6%b3%95&nbsp;-&nbsp;Random%20Forest&amp;url=https%3a%2f%2fchswei.github.io%2fpost%2fstudy-methods%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fchswei.github.io%2fpost%2fstudy-methods%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fchswei.github.io%2fpost%2fstudy-methods%2f&amp;description=%e9%97%9c%e6%96%bc%e8%ae%80%e6%9b%b8%e6%96%b9%e6%b3%95"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fchswei.github.io%2fpost%2fstudy-methods%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/chswei.github.io\/post\/study-methods\/";  
+this.page.identifier = "https:\/\/chswei.github.io\/post\/study-methods\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://chswei.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://chswei.github.io/post/hugo/">
+          <section class="post">
+              <h2>在 GitHub 部署 Hugo 靜態網站</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Random Forest</a> Copyright © 2018</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://chswei.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://chswei.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://chswei.github.io/js/index.js"></script>
+    
+</body>
+</html>
+
