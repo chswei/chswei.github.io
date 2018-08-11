@@ -501,7 +501,7 @@ table.plain tbody > tr:nth-child(odd) > th {
 
 iframe, .fluid-width-video-wrapper {
     display: block;
-    margin: 1.75em 0;
+    margin: 0;
 }
 
 /* When a video is inside the fitvids wrapper, drop the
