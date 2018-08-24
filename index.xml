@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>Copyright © 2018</copyright>
-    <lastBuildDate>Sat, 11 Aug 2018 17:52:21 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 24 Aug 2018 23:57:12 +0800</lastBuildDate>
     
 	<atom:link href="https://chswei.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Enpass 和 SizeUp</title>
+      <link>https://chswei.github.io/diary/180824/</link>
+      <pubDate>Fri, 24 Aug 2018 23:57:12 +0800</pubDate>
+      
+      <guid>https://chswei.github.io/diary/180824/</guid>
+      <description>Enpass 最近突然對網路資安起了警戒，所以在比較了 1password、LastPass 等密碼管理軟體後，最後選了 Enpass。有幾個主要原因：幾乎免費、預設 local 端儲存、好用的 Safari extension、優秀的同步支援。
+SizeUp 對比 Windows 10 使用快捷鍵分割視窗， Mac 內建的 Split View 使用起來很麻煩且不直覺。網路上大多推薦 Moom、Magnet、BetterSnapTool，但都是付費軟體。雖然也不是不願意付錢，但基於能省則省的原則，最後找到了 SizeUp，完完全全符合我的需求。 (過程中有找到一個 Alfred 的 workflow，也能控制 layout，但似乎不是那麼完美)</description>
+    </item>
     
     <item>
       <title>關於讀書方法</title>
@@ -19,7 +29,7 @@
       
       <guid>https://chswei.github.io/post/study-methods/</guid>
       <description>還記得以前國中的時候老師要我上台跟同學分享讀書方法，當時說不出所以然，反正把課本多念幾遍就是了。這麼多年過去了，讀書方法一直沒什麼改變，考前預留一段足夠的時間開始複習，用螢光筆在課本或共筆上劃線做記號，有多餘的時間就做點筆記統整，然後至少把上課內容看兩遍，再寫寫考古題，成績就能保持在不錯的水準。因此也沒有特別想要去改進讀書方法。然而這種螢光筆劃線式的方法看似有效率，實際上內容完全沒有吸收進腦中，而且忘得很快，每次在生活中看到自己曾經學過的東西總會很興奮地跟旁人說「啊這個我學過耶」，但馬上又因為記憶模糊而支支吾吾地帶過，屢試不爽。
-今年寒假在 Coursera 參加一門叫作 Learning How to Learn 的熱門課程，老師們以記憶形成的理論一步步教導該如何正確地學習，但後來我覺得講得太枯燥，所以並沒有看完所有的影片，也沒有認真應用在課業上 (好浪費XD)。然後最近發現一位叫作 Ali Abdaal 的 YouTuber。他是英國劍橋大學醫學院的學生，影片品質和可看度都還蠻高的，而其中一系列 Study Tips 的影片真的讓我獲益良多，尤其醫學背景對我來說更具參考性。
+今年寒假在 Coursera 參加一門叫作 Learning How to Learn 的熱門課程，老師們以記憶形成的理論一步步教導該如何正確地學習，但後來我覺得講得太枯燥，所以並沒有看完所有的影片，也沒有認真應用在課業上 (好浪費XD)。然後最近發現一位叫作 Ali Abdaal 的 YouTuber。他是英國劍橋大學醫學院的學生，影片品質和可看度都還蠻高的，而其中一系列 Study Tips 的影片真的讓我獲益良多，尤其醫學背景對我來說更具參考價值。
 這邊先列出影片中最重要的兩個方法：active recall 和 spaced repetition。
 Active Recall   
 Active Recall 顧名思義就是回想學習的內容。例如可以回想並總結今天所學的大架構是如何，然後這些大架構下面有哪些細節等。這種從大腦提取記憶的過程能讓記憶更牢固、更長久。一直以來因為我念書速度很慢，看完一個單元需要花很多時間，所以每次做完螢光筆的劃記就會懶得再耗神回想，但就是這種壞習慣讓我的記憶很不穩固，考完試就忘。
