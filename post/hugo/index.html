@@ -40,8 +40,7 @@
 
     
     <meta name="description" content="第一次搭建個人網站，選擇了 Hugo。儘管官方文件寫得很詳細，但 Programming 新手如我在建立的過程中還是遇到了一些困難，因此紀錄一下，希望能幫到跟我同樣情況的人。
-以下分為兩部分介紹：本地建立檔案、部署到 GitHub。(使用 MacOS)
-第一部分：本地建立檔案 老實說 Hugo 真的很人性化，簡單幾個步" />
+以下分為兩部分介紹：本地建立檔案、部署到 GitHub。(使用 MacOS) (2018/09/01 補充 Windows 本地建立檔案方法在最" />
     
 
     <meta name="HandheldFriendly" content="True" />
@@ -96,8 +95,8 @@
     },
     "headline": 在 GitHub 部署 Hugo 靜態網站,
     "name": 在 GitHub 部署 Hugo 靜態網站,
-    "wordCount": 209,
-    "timeRequired": "PT1M",
+    "wordCount": 293,
+    "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": en
@@ -215,7 +214,8 @@
 
 <p>第一次搭建個人網站，選擇了 Hugo。儘管<a href="https://gohugo.io/documentation/">官方文件</a>寫得很詳細，但 Programming 新手如我在建立的過程中還是遇到了一些困難，因此紀錄一下，希望能幫到跟我同樣情況的人。</p>
 
-<p>以下分為兩部分介紹：本地建立檔案、部署到 GitHub。(使用 MacOS)</p>
+<p>以下分為兩部分介紹：本地建立檔案、部署到 GitHub。(使用 MacOS)
+(2018/09/01 補充 Windows 本地建立檔案方法在最下面)</p>
 
 <h2 id="第一部分-本地建立檔案">第一部分：本地建立檔案</h2>
 
@@ -290,6 +290,32 @@ git push -u origin master</code></pre></div>
 <li><a href="https://gohugo.io/documentation/">Hugo Documentation</a></li>
 <li><a href="https://brent-li.github.io/post/build-personal-site-with-hugo/">用Hugo搭建个人网站</a></li>
 <li><a href="https://chengjunwang.com/note/note_archive/2016-08-03-github/">Github个人网站维护</a></li>
+</ol>
+
+<hr />
+
+<h2 id="windows-10-本地建立檔案方法">Windows 10 本地建立檔案方法</h2>
+
+<h3 id="1-打開檔案總管-進到-c-槽-其實哪裡都可以-建立名為-hugo-的資料夾-c-hugo">1. 打開檔案總管，進到 C 槽 (其實哪裡都可以)，建立名為 <code>Hugo</code> 的資料夾 (C:\Hugo)</h3>
+
+<h3 id="2-在-hugo-資料夾內建立名為-bin-的資料夾-c-hugo-bin">2. 在 <code>Hugo</code> 資料夾內建立名為 <code>bin</code> 的資料夾 (C:\Hugo\bin)</h3>
+
+<h3 id="3-在-hugo-資料夾內建立名為-sites-的資料夾-c-hugo-sites">3. 在 <code>Hugo</code> 資料夾內建立名為 <code>Sites</code> 的資料夾 (C:\Hugo\Sites)</h3>
+
+<h3 id="4-到-releases-gohugoio-hugo-github-https-github-com-gohugoio-hugo-releases-下載-hugo-版本-windows-bit32-64-zip-並解壓縮到-c-hugo-bin-可以發現裡面有包含-hugo-exe-等三個檔案">4. 到 <a href="https://github.com/gohugoio/hugo/releases">Releases·gohugoio/Hugo·GitHub</a> 下載 <code>hugo_版本_Windows-bit32/64.zip</code>，並解壓縮到 <code>C:\Hugo\bin</code>，可以發現裡面有包含<code>hugo.exe</code> 等三個檔案</h3>
+
+<h3 id="5-將-hugo-指令加到-windows-的-path-設定-如下">5. 將 hugo 指令加到 Windows 的 PATH 設定，如下：</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">1. 利用桌面左下的搜尋功能搜尋「檢視進階系統設定」
+2. 點擊「環境變數」
+3. 在「xxx 的使用者變數」中雙擊 「Path」那一列
+4. 點擊「新增」，輸入 `C:\Hugo\bin` (其實就是輸入 `hugo.exe` 的路徑位置)，點擊每一個視窗的「確定」</pre></div>
+<h3 id="6-然後從上面第一部分的第三步開始做下來就完成了-可以使用-cmd-下指令">6. 然後從上面第一部分的第三步開始做下來就完成了 (可以使用 cmd 下指令)</h3>
+
+<h3 id="references-1">References:</h3>
+
+<ol>
+<li><a href="https://bwaycer.github.io/hugo_tutorial.hugo/tutorials/installing-on-windows/">Hugo - Installing on Windows</a></li>
+<li><a href="https://www.youtube.com/watch?v=G7umPCU-8xc&amp;list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3&amp;index=2">Installing Hugo on Windows | Hugo - Static Site Generator | Tutorial 2 - YouTube</a></li>
 </ol>
 
     </section>
