@@ -95,7 +95,7 @@
     },
     "headline": 在 GitHub 部署 Hugo 靜態網站,
     "name": 在 GitHub 部署 Hugo 靜態網站,
-    "wordCount": 293,
+    "wordCount": 283,
     "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
@@ -221,32 +221,32 @@
 
 <p>老實說 Hugo 真的很人性化，簡單幾個步驟就能讓使用者建立網站的雛形。</p>
 
-<h3 id="1-打開-terminal-安裝-homebrew">1. 打開 terminal，安裝 Homebrew</h3>
+<h4 id="1-打開-terminal-安裝-homebrew">1. 打開 terminal，安裝 Homebrew</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">/usr/bin/ruby -e <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span></code></pre></div>
-<h3 id="2-安裝-hugo">2. 安裝 Hugo</h3>
+<h4 id="2-安裝-hugo">2. 安裝 Hugo</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">brew install hugo</code></pre></div>
-<h3 id="3-建立新網站">3. 建立新網站</h3>
+<h4 id="3-建立新網站">3. 建立新網站</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">hugo new site website-hugo
 cd website-hugo</code></pre></div>
 <p><code>website-hugo</code> 可以替換成任意名稱，但你也可以跟我一樣，避免麻煩。找到名為 <code>website-hugo</code> 的資料夾，觀察一下內部資料夾結構。</p>
 
-<h3 id="4-新增主題-theme-https-themes-gohugo-io-此處以-casper-https-themes-gohugo-io-casper-為例">4. 新增主題 <a href="https://themes.gohugo.io">(theme)</a>：此處以 <a href="https://themes.gohugo.io/casper/">Casper</a> 為例</h3>
+<h4 id="4-新增主題-theme-https-themes-gohugo-io-此處以-casper-https-themes-gohugo-io-casper-為例">4. 新增主題 <a href="https://themes.gohugo.io">(theme)</a>：此處以 <a href="https://themes.gohugo.io/casper/">Casper</a> 為例</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">git clone https://github.com/vjeantet/hugo-theme-casper themes/casper</code></pre></div>
 <p>你也可以選其他主題，進到該主題的 GitHub repo，將上面的網址改成 repo 的網址、<code>themes/casper</code> 改成 <code>themes/你的主題名稱</code>。</p>
 
-<h3 id="5-將-themes-casper-中的-static-和-layouts-資料夾複製-取代根目錄中的-static-和-layouts-資料夾">5. 將 /themes/casper 中的 static 和 layouts 資料夾複製，取代根目錄中的 static 和 layouts 資料夾</h3>
+<h4 id="5-將-themes-casper-中的-static-和-layouts-資料夾複製-取代根目錄中的-static-和-layouts-資料夾">5. 將 /themes/casper 中的 static 和 layouts 資料夾複製，取代根目錄中的 static 和 layouts 資料夾</h4>
 
-<h3 id="6-建立新文章">6. 建立新文章</h3>
+<h4 id="6-建立新文章">6. 建立新文章</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">hugo new posts/my-first-post.md</code></pre></div>
 <p>此指令會在 <code>/content/posts</code> 資料夾中建立 <code>my-first-post.md</code>。使用任意文字編輯器打開此 markdown 文件，將 draft 改成 false，文件內容任意。以後建立文章都是以此方式。</p>
 
 <p>使用文字編輯器打開 <code>config.toml</code>，並調整內容為上面這樣。</p>
 
-<h3 id="7-編輯-config-toml">7. 編輯 config.toml</h3>
+<h4 id="7-編輯-config-toml">7. 編輯 config.toml</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">baseURL = &#34;https://chswei.github.io/&#34;    #改成你的GitHub帳號名稱
 languageCode = &#34;zh-tw&#34;
 title = &#34;Chswei Blog&#34;    #自由命名</pre></div>
-<h3 id="8-本地測試">8. 本地測試</h3>
+<h4 id="8-本地測試">8. 本地測試</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">hugo server -D</code></pre></div>
 <p>執行完後，在瀏覽器中輸入網址 <a href="http://localhost:1313/">http://localhost:1313/</a> ，就可以看到網站的雛形了！</p>
 
@@ -254,22 +254,22 @@ title = &#34;Chswei Blog&#34;    #自由命名</pre></div>
 
 <p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Hugo 部署在 GitHub 的方式</a>有兩種，這邊介紹部署個人唯一主頁的方式。</p>
 
-<h3 id="1-在-github-建立兩個-repo">1. 在 GitHub 建立兩個 repo</h3>
+<h4 id="1-在-github-建立兩個-repo">1. 在 GitHub 建立兩個 repo</h4>
 
 <p>在 GitHub 建立 <code>website-hugo</code> 和 <code>chswei.github.io</code> (改成自己的帳號名稱) 兩個 repo。</p>
 
-<h3 id="2-建立-public-資料夾">2. 建立 /public 資料夾</h3>
+<h4 id="2-建立-public-資料夾">2. 建立 /public 資料夾</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">hugo</code></pre></div>
 <p>執行 <code>hugo</code>，就會在 <code>website-hugo</code> 內產生名為 <code>public</code> 的資料夾。</p>
 
-<h3 id="3-將-public-資料夾連結到-github-上的-chswei-github-io">3. 將 /public 資料夾連結到 GitHub 上的 chswei.github.io</h3>
+<h4 id="3-將-public-資料夾連結到-github-上的-chswei-github-io">3. 將 /public 資料夾連結到 GitHub 上的 chswei.github.io</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">cd public
 git init
 git remote add origin https://github.com/chswei/chswei.github.io.git
 git add .
 git commit -m <span style="color:#e6db74">&#34;Initial commit&#34;</span>
 git push -u origin master</code></pre></div>
-<h3 id="4-將整個-website-hugo-資料夾連結到-github-上的-website-hugo">4. 將整個 website-hugo 資料夾連結到 GitHub 上的 website-hugo</h3>
+<h4 id="4-將整個-website-hugo-資料夾連結到-github-上的-website-hugo">4. 將整個 website-hugo 資料夾連結到 GitHub 上的 website-hugo</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">cd ../
 git init
 git remote add origin https://github.com/chswei/website-hugo.git
@@ -284,7 +284,7 @@ git push -u origin master</code></pre></div>
 
 <p><img src="https://chswei.github.io/images/hugo/hugo-3.png" alt="hugo-3" /></p>
 
-<h3 id="references">References:</h3>
+<h4 id="references">References:</h4>
 
 <ol>
 <li><a href="https://gohugo.io/documentation/">Hugo Documentation</a></li>
@@ -296,22 +296,23 @@ git push -u origin master</code></pre></div>
 
 <h2 id="windows-10-本地建立檔案方法">Windows 10 本地建立檔案方法</h2>
 
-<h3 id="1-打開檔案總管-進到-c-槽-其實哪裡都可以-建立名為-hugo-的資料夾-c-hugo">1. 打開檔案總管，進到 C 槽 (其實哪裡都可以)，建立名為 <code>Hugo</code> 的資料夾 (C:\Hugo)</h3>
+<ol>
+<li>打開檔案總管，進到 C 槽 (其實哪裡都可以)，建立名為 <code>Hugo</code> 的資料夾 (C:\Hugo)</li>
+<li>在 <code>Hugo</code> 資料夾內建立名為 <code>bin</code> 的資料夾 (C:\Hugo\bin)</li>
+<li>在 <code>Hugo</code> 資料夾內建立名為 <code>Sites</code> 的資料夾 (C:\Hugo\Sites)</li>
+<li>到 <a href="https://github.com/gohugoio/hugo/releases">Releases·gohugoio/Hugo·GitHub</a> 下載 <code>hugo_版本_Windows-bit32/64.zip</code>，並解壓縮到 <code>C:\Hugo\bin</code>，可以發現裡面有包含<code>hugo.exe</code> 等三個檔案</li>
+<li>將 hugo 指令加到 Windows 的 PATH 設定，如下：
 
-<h3 id="2-在-hugo-資料夾內建立名為-bin-的資料夾-c-hugo-bin">2. 在 <code>Hugo</code> 資料夾內建立名為 <code>bin</code> 的資料夾 (C:\Hugo\bin)</h3>
+<ol>
+<li>利用桌面左下的搜尋功能搜尋「檢視進階系統設定」</li>
+<li>點擊「環境變數」</li>
+<li>在「xxx 的使用者變數」中雙擊 「Path」那一列</li>
+<li>點擊「新增」，輸入 <code>C:\Hugo\bin</code> (其實就是輸入 <code>hugo.exe</code> 的路徑位置)，點擊每一個視窗的「確定」</li>
+</ol></li>
+<li>然後從上面第一部分的第三步開始做下來就完成了 (可以使用 cmd 下指令)</li>
+</ol>
 
-<h3 id="3-在-hugo-資料夾內建立名為-sites-的資料夾-c-hugo-sites">3. 在 <code>Hugo</code> 資料夾內建立名為 <code>Sites</code> 的資料夾 (C:\Hugo\Sites)</h3>
-
-<h3 id="4-到-releases-gohugoio-hugo-github-https-github-com-gohugoio-hugo-releases-下載-hugo-版本-windows-bit32-64-zip-並解壓縮到-c-hugo-bin-可以發現裡面有包含-hugo-exe-等三個檔案">4. 到 <a href="https://github.com/gohugoio/hugo/releases">Releases·gohugoio/Hugo·GitHub</a> 下載 <code>hugo_版本_Windows-bit32/64.zip</code>，並解壓縮到 <code>C:\Hugo\bin</code>，可以發現裡面有包含<code>hugo.exe</code> 等三個檔案</h3>
-
-<h3 id="5-將-hugo-指令加到-windows-的-path-設定-如下">5. 將 hugo 指令加到 Windows 的 PATH 設定，如下：</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">1. 利用桌面左下的搜尋功能搜尋「檢視進階系統設定」
-2. 點擊「環境變數」
-3. 在「xxx 的使用者變數」中雙擊 「Path」那一列
-4. 點擊「新增」，輸入 `C:\Hugo\bin` (其實就是輸入 `hugo.exe` 的路徑位置)，點擊每一個視窗的「確定」</pre></div>
-<h3 id="6-然後從上面第一部分的第三步開始做下來就完成了-可以使用-cmd-下指令">6. 然後從上面第一部分的第三步開始做下來就完成了 (可以使用 cmd 下指令)</h3>
-
-<h3 id="references-1">References:</h3>
+<h4 id="references-1">References:</h4>
 
 <ol>
 <li><a href="https://bwaycer.github.io/hugo_tutorial.hugo/tutorials/installing-on-windows/">Hugo - Installing on Windows</a></li>
