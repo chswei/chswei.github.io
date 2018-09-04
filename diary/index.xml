@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>Copyright © 2018</copyright>
-    <lastBuildDate>Fri, 24 Aug 2018 23:57:12 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 04 Sep 2018 18:16:08 +0800</lastBuildDate>
     
 	<atom:link href="https://chswei.github.io/diary/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>180904</title>
+      <link>https://chswei.github.io/diary/180904/</link>
+      <pubDate>Tue, 04 Sep 2018 18:16:08 +0800</pubDate>
+      
+      <guid>https://chswei.github.io/diary/180904/</guid>
+      <description>曾經在台大上過傅佩榮教授的周易哲學，最近因為某個原因打算重新開始學習，有機會再和大家分享。</description>
+    </item>
     
     <item>
       <title>Enpass 和 SizeUp</title>

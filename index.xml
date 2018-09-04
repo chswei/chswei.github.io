@@ -7,27 +7,36 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>Copyright © 2018</copyright>
-    <lastBuildDate>Fri, 24 Aug 2018 23:57:12 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 04 Sep 2018 18:16:08 +0800</lastBuildDate>
     
 	<atom:link href="https://chswei.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>周易</title>
+      <link>https://chswei.github.io/post/diary/180904/</link>
+      <pubDate>Tue, 04 Sep 2018 18:16:08 +0800</pubDate>
+      
+      <guid>https://chswei.github.io/post/diary/180904/</guid>
+      <description>曾經在台大上過傅佩榮教授的周易哲學，最近因為某個原因打算重新開始學習。當初上課的參考書籍是「樂天知命：傅佩榮談《易經》」、「易經解讀：新世紀繼往開來的思想經典」這兩本。</description>
+    </item>
+    
+    <item>
       <title>Enpass 和 SizeUp</title>
-      <link>https://chswei.github.io/diary/180824/</link>
+      <link>https://chswei.github.io/post/diary/180824/</link>
       <pubDate>Fri, 24 Aug 2018 23:57:12 +0800</pubDate>
       
-      <guid>https://chswei.github.io/diary/180824/</guid>
+      <guid>https://chswei.github.io/post/diary/180824/</guid>
       <description>Enpass 最近突然對網路資安起了警戒，所以在比較了 1password、LastPass 等密碼管理軟體後，最後選了 Enpass。有幾個主要原因：幾乎免費、預設 local 端儲存、好用的 Safari extension、優秀的同步支援。
 SizeUp 對比 Windows 10 使用快捷鍵分割視窗， Mac 內建的 Split View 使用起來很麻煩且不直覺。網路上大多推薦 Moom、Magnet、BetterSnapTool，但都是付費軟體。雖然也不是不願意付錢，但基於能省則省的原則，最後找到了 SizeUp，完完全全符合我的需求。 (過程中有找到一個 Alfred 的 workflow，也能控制 layout，但似乎不是那麼完美)</description>
     </item>
     
     <item>
       <title>關於讀書方法</title>
-      <link>https://chswei.github.io/post/study-methods/</link>
+      <link>https://chswei.github.io/post/medicine/study-methods/</link>
       <pubDate>Sat, 11 Aug 2018 17:52:21 +0800</pubDate>
       
-      <guid>https://chswei.github.io/post/study-methods/</guid>
+      <guid>https://chswei.github.io/post/medicine/study-methods/</guid>
       <description>還記得以前國中的時候老師要我上台跟同學分享讀書方法，當時說不出所以然，反正把課本多念幾遍就是了。這麼多年過去了，讀書方法一直沒什麼改變，考前預留一段足夠的時間開始複習，用螢光筆在課本或共筆上劃線做記號，有多餘的時間就做點筆記統整，然後至少把上課內容看兩遍，再寫寫考古題，成績就能保持在不錯的水準。因此也沒有特別想要去改進讀書方法。然而這種螢光筆劃線式的方法看似有效率，實際上內容完全沒有吸收進腦中，而且忘得很快，每次在生活中看到自己曾經學過的東西總會很興奮地跟旁人說「啊這個我學過耶」，但馬上又因為記憶模糊而支支吾吾地帶過，屢試不爽。
 今年寒假在 Coursera 參加一門叫作 Learning How to Learn 的熱門課程，老師們以記憶形成的理論一步步教導該如何正確地學習，但後來我覺得講得太枯燥，所以並沒有看完所有的影片，也沒有認真應用在課業上 (好浪費XD)。然後最近發現一位叫作 Ali Abdaal 的 YouTuber。他是英國劍橋大學醫學院的學生，影片品質和可看度都還蠻高的，而其中一系列 Study Tips 的影片真的讓我獲益良多，尤其醫學背景對我來說更具參考價值。
 這邊先列出影片中最重要的兩個方法：active recall 和 spaced repetition。
@@ -42,19 +51,19 @@ Spaced Repetition (間隔重複) 其實就是耳熟能詳的遺忘曲線的應�
     
     <item>
       <title>新篇章</title>
-      <link>https://chswei.github.io/diary/180805/</link>
+      <link>https://chswei.github.io/post/diary/180805/</link>
       <pubDate>Sun, 05 Aug 2018 23:40:59 +0800</pubDate>
       
-      <guid>https://chswei.github.io/diary/180805/</guid>
+      <guid>https://chswei.github.io/post/diary/180805/</guid>
       <description>最近生活有一些想法和心得，但還不到寫成完整文章的程度，又不適合放在 Twitter，所以有了寫短篇日記的念頭。每篇可能幾十個字之類的，希望這個方式能讓自己比較有動力寫下去，畢竟長文寫起來很累啊！</description>
     </item>
     
     <item>
       <title>在 GitHub 部署 Hugo 靜態網站</title>
-      <link>https://chswei.github.io/post/hugo/</link>
+      <link>https://chswei.github.io/post/programming/hugo/</link>
       <pubDate>Thu, 12 Jul 2018 22:36:43 +0800</pubDate>
       
-      <guid>https://chswei.github.io/post/hugo/</guid>
+      <guid>https://chswei.github.io/post/programming/hugo/</guid>
       <description>第一次搭建個人網站，選擇了 Hugo。儘管官方文件寫得很詳細，但 Programming 新手如我在建立的過程中還是遇到了一些困難，因此紀錄一下，希望能幫到跟我同樣情況的人。
 以下分為兩部分介紹：本地建立檔案、部署到 GitHub。(使用 MacOS) (2018/09/01 補充 Windows 本地建立檔案方法在最下面)
 第一部分：本地建立檔案 老實說 Hugo 真的很人性化，簡單幾個步驟就能讓使用者建立網站的雛形。
@@ -65,10 +74,10 @@ Spaced Repetition (間隔重複) 其實就是耳熟能詳的遺忘曲線的應�
     
     <item>
       <title>Python 中 sys.argv[] 配合 Shell Script 的使用方法</title>
-      <link>https://chswei.github.io/post/sysargv-shell/</link>
+      <link>https://chswei.github.io/post/programming/sysargv-shell/</link>
       <pubDate>Thu, 12 Jul 2018 22:25:02 +0800</pubDate>
       
-      <guid>https://chswei.github.io/post/sysargv-shell/</guid>
+      <guid>https://chswei.github.io/post/programming/sysargv-shell/</guid>
       <description>最近在寫李宏毅老師的 ML 課程作業時，第一次接觸了shell script，也終於弄懂 sys.argv[] 的用法。過程中看了網路上許多參考資料的介紹，總覺得對於我這個新手來說太過複雜，故在此稍作整理並紀錄。
 第一步：建立含有 sys.argv[] 的 .py 文件 使用任意文字編輯器建立 .py 文件，如圖中的 test_code.py。
 第二步：建立 .sh 文件 在 terminal 或 cmd 輸入以下指令：
@@ -80,10 +89,10 @@ touch shell_name touch 指令可以建立新的 .sh 文件，後面接你要的�
     
     <item>
       <title>在 Jupyter Notebook 上安裝 R (Windows 10)</title>
-      <link>https://chswei.github.io/post/r-kernel-for-jupyter-notebook/</link>
+      <link>https://chswei.github.io/post/programming/r-kernel-for-jupyter-notebook/</link>
       <pubDate>Thu, 12 Jul 2018 21:55:00 +0800</pubDate>
       
-      <guid>https://chswei.github.io/post/r-kernel-for-jupyter-notebook/</guid>
+      <guid>https://chswei.github.io/post/programming/r-kernel-for-jupyter-notebook/</guid>
       <description>最近為了某個目的，想在 Jupyter Notebook 上寫 R code。利用 IRkernel 就能達到這件事，然而在安裝的過程中發生了一些問題，因此做了很多搜尋，將操作步驟整理在此，希望能幫助到一些人，同時也紀錄自己對於電腦世界的懵懂無知。
 安裝 IRkernel 的前提 (Requirements)  安裝好 R （我的版本是 3.4.1，若還有安裝 RStudio 更好）。 安裝好 Jupyter Notebook （我是用 Anaconda 安裝的）。  此路不通 (Not Work for Me) 一開始我按照這個網站的步驟操作，在 Anaconda Prompt 內打入：
 conda update anaconda conda install -c r r-essentials 在筆電和桌電上試驗都在第二步出現了 Error，沒辦法安裝，查了 google 和 stackoverflow 都找不到解答。（不過好多東西我都看不懂，所以也有可能是有解的。）之後還在 YouTube 看別人怎麼安裝，但對我來說還是不成功。
@@ -94,10 +103,10 @@ install.packages(c(&amp;#39;repr&amp;#39;, &amp;#39;IRdisplay&amp;#39;, &amp;#39
     
     <item>
       <title>為什麼 R 比 MS Excel 更適合做資料分析？</title>
-      <link>https://chswei.github.io/post/why-r/</link>
+      <link>https://chswei.github.io/post/programming/why-r/</link>
       <pubDate>Thu, 12 Jul 2018 17:08:36 +0800</pubDate>
       
-      <guid>https://chswei.github.io/post/why-r/</guid>
+      <guid>https://chswei.github.io/post/programming/why-r/</guid>
       <description>從六月中開始放暑假後，也學了快三個月的 R 語言。有一天我爸瞄到我正在打 code，就問這是什麼。我跟他簡單解釋說 R 是一個用來進行數據處理和分析的程式語言，沒想到他反問我為什麼不用 Excel 做就好。對耶！好問題！老實說，我之前並沒有仔細想過這件事，只是覺得學了一個程式語言好酷好潮，以後如果需要統計分析時就多了一個工具可以使用，如此而已。
 平常使用 Excel 的頻率也不高，最多就是會使用常見函數和樞紐分析而已，R 也只有學了短短的 70 多天，討論這個題目其實說服力有點薄弱。不過對於剛踏入資料科學領域的我來說，這確實是個值得思考的問題，藉此了解各種工具的優缺點，未來也才能合理地運用它們。
 網路上已經有不少人討論過這個問題了，但我想結合自己學習和使用的心得，以研究人員、資料科學家（而非一般人）的角度，將 R 比 Excel 優秀的部分，依據我個人有感程度分成以下八點敘述：

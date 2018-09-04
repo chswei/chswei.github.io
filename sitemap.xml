@@ -3,37 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://chswei.github.io/diary/180824/</loc>
+    <loc>https://chswei.github.io/post/diary/180904/</loc>
+    <lastmod>2018-09-04T18:16:08+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chswei.github.io/post/diary/180824/</loc>
     <lastmod>2018-08-24T23:57:12+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://chswei.github.io/post/study-methods/</loc>
+    <loc>https://chswei.github.io/post/medicine/study-methods/</loc>
     <lastmod>2018-08-11T17:52:21+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://chswei.github.io/diary/180805/</loc>
+    <loc>https://chswei.github.io/post/diary/180805/</loc>
     <lastmod>2018-08-05T23:40:59+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://chswei.github.io/post/hugo/</loc>
+    <loc>https://chswei.github.io/post/programming/hugo/</loc>
     <lastmod>2018-07-12T22:36:43+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://chswei.github.io/post/sysargv-shell/</loc>
+    <loc>https://chswei.github.io/post/programming/sysargv-shell/</loc>
     <lastmod>2018-07-12T22:25:02+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://chswei.github.io/post/r-kernel-for-jupyter-notebook/</loc>
+    <loc>https://chswei.github.io/post/programming/r-kernel-for-jupyter-notebook/</loc>
     <lastmod>2018-07-12T21:55:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://chswei.github.io/post/why-r/</loc>
+    <loc>https://chswei.github.io/post/programming/why-r/</loc>
     <lastmod>2018-07-12T17:08:36+08:00</lastmod>
   </url>
   
@@ -54,14 +59,8 @@
   </url>
   
   <url>
-    <loc>https://chswei.github.io/diary/</loc>
-    <lastmod>2018-08-24T23:57:12+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://chswei.github.io/post/</loc>
-    <lastmod>2018-08-11T17:52:21+08:00</lastmod>
+    <lastmod>2018-09-04T18:16:08+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -79,7 +78,7 @@
   
   <url>
     <loc>https://chswei.github.io/</loc>
-    <lastmod>2018-08-24T23:57:12+08:00</lastmod>
+    <lastmod>2018-09-04T18:16:08+08:00</lastmod>
     <priority>0</priority>
   </url>
   
