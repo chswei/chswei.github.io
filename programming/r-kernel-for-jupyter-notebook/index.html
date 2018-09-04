@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="在 Jupyter Notebook 上安裝 R (Windows 10)"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@wujiyaker"/>
+
+
+
+  	<meta property="og:title" content="在 Jupyter Notebook 上安裝 R (Windows 10) &middot; Random Forest" />
+  	<meta property="og:site_name" content="Random Forest" />
+  	<meta property="og:url" content="https://chswei.github.io/programming/r-kernel-for-jupyter-notebook/" />
+
+    
+        
+            <meta property="og:image" content="/images/forest.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2018-07-12T21:55:00&#43;08:00" />
+
+    
+    <meta property="article:tag" content="r" />
+    
+    <meta property="article:tag" content="data_science" />
+    
+    
+
+    <title>在 Jupyter Notebook 上安裝 R (Windows 10) &middot; Random Forest</title>
+
+    
+    <meta name="description" content="最近為了某個目的，想在 Jupyter Notebook 上寫 R code。利用 IRkernel 就能達到這件事，然而在安裝的過程中發生了一些問題，因此做了很多搜尋，將操作步驟整理在此，希望能幫助到一些人，同時也紀錄自己對於電腦世界的懵懂無知。
+安裝 IRkernel 的前提 (Requirements)  安裝好" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://chswei.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://chswei.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://chswei.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://chswei.github.io/css/nav.css" />
+
+    
+
+    
+
+    
+      
+          <link href="https://chswei.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Random Forest" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.42.2" />
+
+    <link rel="canonical" href="https://chswei.github.io/programming/r-kernel-for-jupyter-notebook/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": 
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": https://chswei.github.io/,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": 在 Jupyter Notebook 上安裝 R (Windows 10),
+    "name": 在 Jupyter Notebook 上安裝 R (Windows 10),
+    "wordCount": 130,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://chswei.github.io/programming/r-kernel-for-jupyter-notebook/,
+    "datePublished": 2018-07-12T21:55Z,
+    "dateModified": 2018-07-12T21:55Z,
+    
+    "keywords": r, data_science,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://chswei.github.io/programming/r-kernel-for-jupyter-notebook/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-122220812-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://chswei.github.io/about">About Me</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://chswei.github.io/">Home</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://chswei.github.io/medicine">醫學</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://chswei.github.io/programming">程式</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://chswei.github.io/diary">Short Diary</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://chswei.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post programming">
+
+    <header class="post-header">
+        <h1 class="post-title">在 Jupyter Notebook 上安裝 R (Windows 10)</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+         
+          <span class="post-tag small"><a href="https://chswei.github.io//tags/r/">#r</a></span>
+         
+          <span class="post-tag small"><a href="https://chswei.github.io//tags/data_science/">#data_science</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<p><img src="https://chswei.github.io/images/r-kernel-for-jupyter-notebook/IRkernel-1.png" alt="IRkernel-1" /></p>
+
+<p>最近為了某個目的，想在 Jupyter Notebook 上寫 R code。利用 IRkernel 就能達到這件事，然而在安裝的過程中發生了一些問題，因此做了很多搜尋，將操作步驟整理在此，希望能幫助到一些人，同時也紀錄自己對於電腦世界的懵懂無知。</p>
+
+<hr />
+
+<h3 id="安裝-irkernel-的前提-requirements">安裝 IRkernel 的前提 (Requirements)</h3>
+
+<ol>
+<li>安裝好 R （我的版本是 3.4.1，若還有安裝 RStudio 更好）。</li>
+<li>安裝好 Jupyter Notebook （我是用 Anaconda 安裝的）。</li>
+</ol>
+
+<h3 id="此路不通-not-work-for-me">此路不通 (Not Work for Me)</h3>
+
+<p>一開始我按照<a href="http://white5168.blogspot.com/2017/09/anaconda-rpythonr.html#.W0dfsWb3X-b">這個網站</a>的步驟操作，在 Anaconda Prompt 內打入：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">conda update anaconda
+conda install -c r r-essentials</code></pre></div>
+<p>在筆電和桌電上試驗都在第二步出現了 Error，沒辦法安裝，查了 google 和 stackoverflow 都找不到解答。（不過好多東西我都看不懂，所以也有可能是有解的。）之後還在 YouTube 看別人怎麼安裝，但對我來說還是不成功。</p>
+
+<h3 id="解法-my-solution">解法 (My Solution)</h3>
+
+<p>後來在某影片中的某片段看到一個似乎是 <a href="https://irkernel.github.io">IRkernel 的官方網址</a>，按照裡面的方法後，就安裝成功了！（心得：看官方文件還是最準的 OTZ）</p>
+
+<h4 id="step-1">Step 1</h4>
+
+<p>在 RStudio 的 Console 內打入：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">install.packages(<span style="color:#66d9ef">c</span>(<span style="color:#e6db74">&#39;repr&#39;</span>, <span style="color:#e6db74">&#39;IRdisplay&#39;</span>, <span style="color:#e6db74">&#39;evaluate&#39;</span>, <span style="color:#e6db74">&#39;crayon&#39;</span>, <span style="color:#e6db74">&#39;pbdZMQ&#39;</span>, <span style="color:#e6db74">&#39;devtools&#39;</span>, <span style="color:#e6db74">&#39;uuid&#39;</span>, <span style="color:#e6db74">&#39;digest&#39;</span>)) 
+devtools<span style="color:#f92672">::</span>install_github(<span style="color:#e6db74">&#39;IRkernel/IRkernel&#39;</span>)</code></pre></div>
+<h4 id="step-2-wrong">Step 2 (Wrong)</h4>
+
+<p>在 RStudio 中的 Console 內打入：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">IRkernel<span style="color:#f92672">::</span>installspec()</code></pre></div>
+<p>結果出現 Error：</p>
+
+<p><img src="https://chswei.github.io/images/r-kernel-for-jupyter-notebook/IRkernel-2.png" alt="IRkernel-2" /></p>
+
+<p>後來在 <a href="https://stackoverflow.com/questions/44056164/jupyter-client-has-to-be-installed-but-jupyter-kernelspec-version-exited-wit/44108916">Stackoverflow</a> 這篇上找到解法 (第二個回答)</p>
+
+<h4 id="step-2-correct">Step 2 (Correct)</h4>
+
+<p>打開 Anaconda Prompt (或是用 Windows 內建的 cmd 好像也可以)，更改路徑到裝有 R.exe 的資料夾 (以下是我的路徑)：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">cd <span style="color:#e6db74">&#34;C:\Program Files\R\R-3.4.1\bin&#34;</span></code></pre></div>
+<p><img src="https://chswei.github.io/images/r-kernel-for-jupyter-notebook/IRkernel-3.png" alt="IRkernel-3" /></p>
+
+<p>接著打入這行，進入 R。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">R.exe</code></pre></div>
+<p>重新打入剛剛在 RStudio 中失敗的這行：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">IRkernel<span style="color:#f92672">::</span>installspec()</code></pre></div>
+<p>沒有出現錯誤！！！先關掉 R，不用儲存空間圖案：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#66d9ef">q</span>()</code></pre></div>
+<h4 id="step-3">Step 3</h4>
+
+<p>先回到你想要的路徑，再打開 Jupyter Notebook：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">cd <span style="color:#e6db74">&#34;你的某資料夾&#34;</span>
+jupyter notebook</code></pre></div>
+<p>出現 R 的選項了！！！</p>
+
+<p><img src="https://chswei.github.io/images/r-kernel-for-jupyter-notebook/IRkernel-4.png" alt="IRkernel-4" /></p>
+
+<p>畫個圖試試看：</p>
+
+<p><img src="https://chswei.github.io/images/r-kernel-for-jupyter-notebook/IRkernel-5.png" alt="IRkernel-5" /></p>
+
+<p>好感動啊！！！！！以上就是安裝 IRkernel 的方法，感謝大家看到這裡。</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+
+<section class="author">
+  <h4><a href="https://chswei.github.io/">chswei</a></h4>
+  
+  <p>Read <a href="https://chswei.github.io/">more posts</a> by this author.</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Taiwan</span>
+    <span class="author-link icon-link"><a href="https://chswei.github.io/">https://chswei.github.io/</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this programming</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%e5%9c%a8%20Jupyter%20Notebook%20%e4%b8%8a%e5%ae%89%e8%a3%9d%20R%20%28Windows%2010%29&nbsp;-&nbsp;Random%20Forest&amp;url=https%3a%2f%2fchswei.github.io%2fprogramming%2fr-kernel-for-jupyter-notebook%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fchswei.github.io%2fprogramming%2fr-kernel-for-jupyter-notebook%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fchswei.github.io%2fprogramming%2fr-kernel-for-jupyter-notebook%2f&amp;description=%e5%9c%a8%20Jupyter%20Notebook%20%e4%b8%8a%e5%ae%89%e8%a3%9d%20R%20%28Windows%2010%29"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fchswei.github.io%2fprogramming%2fr-kernel-for-jupyter-notebook%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/chswei.github.io\/programming\/r-kernel-for-jupyter-notebook\/";  
+this.page.identifier = "https:\/\/chswei.github.io\/programming\/r-kernel-for-jupyter-notebook\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://chswei.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="https://chswei.github.io/programming/sysargv-shell/">
+          <section class="post">
+              <h2>Python 中 sys.argv[] 配合 Shell Script 的使用方法</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://chswei.github.io/programming/why-r/">
+          <section class="post">
+              <h2>為什麼 R 比 MS Excel 更適合做資料分析？</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Random Forest</a> Copyright © 2018</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://chswei.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://chswei.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://chswei.github.io/js/index.js"></script>
+    
+</body>
+</html>
+

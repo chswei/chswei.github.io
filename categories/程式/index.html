@@ -13,15 +13,15 @@
 
 
 
-<meta name="twitter:title" content="Python"/>
+<meta name="twitter:title" content="程式"/>
 <meta name="twitter:description" content="人生最終的夢想是隱居山林"/>
 <meta name="twitter:site" content="@wujiyaker"/>
 
 
 
-  	<meta property="og:title" content="Python &middot; Random Forest" />
+  	<meta property="og:title" content="程式 &middot; Random Forest" />
   	<meta property="og:site_name" content="Random Forest" />
-  	<meta property="og:url" content="https://chswei.github.io/tags/python/" />
+  	<meta property="og:url" content="https://chswei.github.io/categories/%E7%A8%8B%E5%BC%8F/" />
 
     
         
@@ -34,7 +34,7 @@
     <meta property="og:description" content="人生最終的夢想是隱居山林" />
     
 
-    <title>Python &middot; Random Forest</title>
+    <title>程式 &middot; Random Forest</title>
 
     
     <meta name="description" content="人生最終的夢想是隱居山林" />
@@ -58,12 +58,12 @@
           <link href="https://chswei.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Random Forest" />
       
       
-        <link href="https://chswei.github.io/tags/python/index.xml" rel="alternate" type="application/rss+xml" title="Python &middot; Random Forest" />
+        <link href="https://chswei.github.io/categories/%E7%A8%8B%E5%BC%8F/index.xml" rel="alternate" type="application/rss+xml" title="程式 &middot; Random Forest" />
       
     
     <meta name="generator" content="Hugo 0.42.2" />
 
-    <link rel="canonical" href="https://chswei.github.io/tags/python/" />
+    <link rel="canonical" href="https://chswei.github.io/categories/%E7%A8%8B%E5%BC%8F/" />
 
     
       
@@ -156,7 +156,7 @@
     </ul>
 
     
-    <a class="subscribe-button icon-feed" href="https://chswei.github.io/tags/python/index.xml">Subscribe</a>
+    <a class="subscribe-button icon-feed" href="https://chswei.github.io/categories/%E7%A8%8B%E5%BC%8F/index.xml">Subscribe</a>
     
 </div>
 <span class="nav-cover"></span>
@@ -179,7 +179,7 @@
     </nav>
     <div class="vertical">
         <div class="main-header-content inner">
-            <h1 class="page-title">Python</h1>
+            <h1 class="page-title">程式</h1>
             <h2 class="page-description">
                 
             </h2>
@@ -198,6 +198,41 @@
 </nav>
 
 	</div>
+
+	
+	   <article class="post programming">
+    <header class="post-header">
+        <h2 class="post-title"><a href="https://chswei.github.io/programming/hugo/">在 GitHub 部署 Hugo 靜態網站</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>第一次搭建個人網站，選擇了 Hugo。儘管官方文件寫得很詳細，但 Programming 新手如我在建立的過程中還是遇到了一些困難，因此紀錄一下，希望能幫到跟我同樣情況的人。
+以下分為兩部分介紹：本地建立檔案、部署到 GitHub。(使用 MacOS) (2018/09/01 補充 Windows 本地建立檔案方法在最下面)
+第一部分：本地建立檔案 老實說 Hugo 真的很人性化，簡單幾個步驟就能讓使用者建立網站的雛形。
+1. 打開 terminal，安裝 Homebrew /usr/bin/ruby -e &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&#34; 2. 安裝 Hugo brew install hugo 3. 建立新網站 hugo new site website-hugo cd website-hugo website-hugo 可以替換成任意名稱，但你也可以跟我一樣，避免麻煩。找到名為 website-hugo 的資料夾，觀察一下內部資料夾結構。
+4. 新增主題 (theme)：此處以 Casper 為例 git clone https://github.com/vjeantet/hugo-theme-casper themes/casper 你也可以選其他主題，進到該主題的 GitHub repo，將上面的網址改成 repo 的網址、themes/casper 改成 themes/你的主題名稱。
+5. 將 /themes/casper 中的 static 和 layouts 資料夾複製，取代根目錄中的 static 和 layouts 資料夾 6. <a class="read-more" href="https://chswei.github.io/programming/hugo/">&raquo;</a></p>
+        <a href='https://chswei.github.io/programming/hugo/' style="color:rgb(79, 133, 133);font-size:0.7em">Read More >></a></section>
+    <footer class="post-meta">
+        
+
+        
+            
+            
+
+            
+            
+            
+            chswei
+                 
+        
+
+        
+        <time class="post-date" datetime="2018-07-12T22:36:43&#43;08:00">
+            12 Jul 2018
+        </time>
+    </footer>
+</article>
 
 	
 	   <article class="post programming">
@@ -234,6 +269,47 @@ touch shell_name touch 指令可以建立新的 .sh 文件，後面接你要的�
             
         
         <time class="post-date" datetime="2018-07-12T22:25:02&#43;08:00">
+            12 Jul 2018
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post programming">
+    <header class="post-header">
+        <h2 class="post-title"><a href="https://chswei.github.io/programming/r-kernel-for-jupyter-notebook/">在 Jupyter Notebook 上安裝 R (Windows 10)</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>最近為了某個目的，想在 Jupyter Notebook 上寫 R code。利用 IRkernel 就能達到這件事，然而在安裝的過程中發生了一些問題，因此做了很多搜尋，將操作步驟整理在此，希望能幫助到一些人，同時也紀錄自己對於電腦世界的懵懂無知。
+安裝 IRkernel 的前提 (Requirements)  安裝好 R （我的版本是 3.4.1，若還有安裝 RStudio 更好）。 安裝好 Jupyter Notebook （我是用 Anaconda 安裝的）。  此路不通 (Not Work for Me) 一開始我按照這個網站的步驟操作，在 Anaconda Prompt 內打入：
+conda update anaconda conda install -c r r-essentials 在筆電和桌電上試驗都在第二步出現了 Error，沒辦法安裝，查了 google 和 stackoverflow 都找不到解答。（不過好多東西我都看不懂，所以也有可能是有解的。）之後還在 YouTube 看別人怎麼安裝，但對我來說還是不成功。
+解法 (My Solution) 後來在某影片中的某片段看到一個似乎是 IRkernel 的官方網址，按照裡面的方法後，就安裝成功了！（心得：看官方文件還是最準的 OTZ）
+Step 1 在 RStudio 的 Console 內打入：
+install.packages(c(&#39;repr&#39;, &#39;IRdisplay&#39;, &#39;evaluate&#39;, &#39;crayon&#39;, &#39;pbdZMQ&#39;, &#39;devtools&#39;, &#39;uuid&#39;, &#39;digest&#39;)) devtools::install_github(&#39;IRkernel/IRkernel&#39;) Step 2 (Wrong) 在 RStudio 中的 Console 內打入： <a class="read-more" href="https://chswei.github.io/programming/r-kernel-for-jupyter-notebook/">&raquo;</a></p>
+        <a href='https://chswei.github.io/programming/r-kernel-for-jupyter-notebook/' style="color:rgb(79, 133, 133);font-size:0.7em">Read More >></a></section>
+    <footer class="post-meta">
+        
+
+        
+            
+            
+
+            
+            
+            
+            chswei
+                 
+        
+
+        on
+            
+                <a href="https://chswei.github.io//tags/r/">#r</a>,
+            
+                <a href="https://chswei.github.io//tags/data_science/">#data_science</a>,
+            
+        
+        <time class="post-date" datetime="2018-07-12T21:55:00&#43;08:00">
             12 Jul 2018
         </time>
     </footer>

@@ -11,5 +11,23 @@
 	<atom:link href="https://chswei.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>程式</title>
+      <link>https://chswei.github.io/categories/%E7%A8%8B%E5%BC%8F/</link>
+      <pubDate>Thu, 12 Jul 2018 22:36:43 +0800</pubDate>
+      
+      <guid>https://chswei.github.io/categories/%E7%A8%8B%E5%BC%8F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>醫學</title>
+      <link>https://chswei.github.io/categories/%E9%86%AB%E5%AD%B8/</link>
+      <pubDate>Sat, 11 Aug 2018 17:52:21 +0800</pubDate>
+      
+      <guid>https://chswei.github.io/categories/%E9%86%AB%E5%AD%B8/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
