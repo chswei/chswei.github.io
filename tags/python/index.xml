@@ -14,10 +14,10 @@
     
     <item>
       <title>Python 中 sys.argv[] 配合 Shell Script 的使用方法</title>
-      <link>https://chswei.github.io/programming/sysargv-shell/</link>
+      <link>https://chswei.github.io/post/programming/sysargv-shell/</link>
       <pubDate>Thu, 12 Jul 2018 22:25:02 +0800</pubDate>
       
-      <guid>https://chswei.github.io/programming/sysargv-shell/</guid>
+      <guid>https://chswei.github.io/post/programming/sysargv-shell/</guid>
       <description>最近在寫李宏毅老師的 ML 課程作業時，第一次接觸了shell script，也終於弄懂 sys.argv[] 的用法。過程中看了網路上許多參考資料的介紹，總覺得對於我這個新手來說太過複雜，故在此稍作整理並紀錄。
 第一步：建立含有 sys.argv[] 的 .py 文件 使用任意文字編輯器建立 .py 文件，如圖中的 test_code.py。
 第二步：建立 .sh 文件 在 terminal 或 cmd 輸入以下指令：

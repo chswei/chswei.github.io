@@ -13,15 +13,15 @@
 
 
 
-<meta name="twitter:title" content="Post"/>
+<meta name="twitter:title" content="Programming"/>
 <meta name="twitter:description" content="人生最終的夢想是隱居山林"/>
 <meta name="twitter:site" content="@wujiyaker"/>
 
 
 
-  	<meta property="og:title" content="Post &middot; Random Forest" />
+  	<meta property="og:title" content="Programming &middot; Random Forest" />
   	<meta property="og:site_name" content="Random Forest" />
-  	<meta property="og:url" content="https://chswei.github.io/post/" />
+  	<meta property="og:url" content="https://chswei.github.io/categories/programming/" />
 
     
         
@@ -34,7 +34,7 @@
     <meta property="og:description" content="人生最終的夢想是隱居山林" />
     
 
-    <title>Post &middot; Random Forest</title>
+    <title>Programming &middot; Random Forest</title>
 
     
     <meta name="description" content="人生最終的夢想是隱居山林" />
@@ -58,12 +58,12 @@
           <link href="https://chswei.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Random Forest" />
       
       
-        <link href="https://chswei.github.io/post/index.xml" rel="alternate" type="application/rss+xml" title="Post &middot; Random Forest" />
+        <link href="https://chswei.github.io/categories/programming/index.xml" rel="alternate" type="application/rss+xml" title="Programming &middot; Random Forest" />
       
     
     <meta name="generator" content="Hugo 0.42.2" />
 
-    <link rel="canonical" href="https://chswei.github.io/post/" />
+    <link rel="canonical" href="https://chswei.github.io/categories/programming/" />
 
     
       
@@ -156,7 +156,7 @@
     </ul>
 
     
-    <a class="subscribe-button icon-feed" href="https://chswei.github.io/post/index.xml">Subscribe</a>
+    <a class="subscribe-button icon-feed" href="https://chswei.github.io/categories/programming/index.xml">Subscribe</a>
     
 </div>
 <span class="nav-cover"></span>
@@ -179,7 +179,7 @@
     </nav>
     <div class="vertical">
         <div class="main-header-content inner">
-            <h1 class="page-title">Post</h1>
+            <h1 class="page-title">Programming</h1>
             <h2 class="page-description">
                 
             </h2>
@@ -193,13 +193,46 @@
 	<div class="extra-pagination inner">
     <nav class="pagination" role="navigation">
 	
-	    <a class="newer-posts" href="https://chswei.github.io/post/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 2 of 2</span>
+	<span class="page-number">Page 1 of 1</span>
 	
 </nav>
 
 	</div>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="https://chswei.github.io/post/programming/hugo/">在 GitHub 部署 Hugo 靜態網站</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>第一次搭建個人網站，選擇了 Hugo。儘管官方文件寫得很詳細，但 Programming 新手如我在建立的過程中還是遇到了一些困難，因此紀錄一下，希望能幫到跟我同樣情況的人。
+以下分為兩部分介紹：本地建立檔案、部署到 GitHub。(使用 MacOS) (2018/09/01 補充 Windows 本地建立檔案方法在最下面)
+第一部分：本地建立檔案 老實說 Hugo 真的很人性化，簡單幾個步驟就能讓使用者建立網站的雛形。
+1. 打開 terminal，安裝 Homebrew /usr/bin/ruby -e &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&#34; 2. 安裝 Hugo brew install hugo 3. 建立新網站 hugo new site website-hugo cd website-hugo website-hugo 可以替換成任意名稱，但你也可以跟我一樣，避免麻煩。找到名為 website-hugo 的資料夾，觀察一下內部資料夾結構。
+4. 新增主題 (theme)：此處以 Casper 為例 git clone https://github.com/vjeantet/hugo-theme-casper themes/casper 你也可以選其他主題，進到該主題的 GitHub repo，將上面的網址改成 repo 的網址、themes/casper 改成 themes/你的主題名稱。
+5. 將 /themes/casper 中的 static 和 layouts 資料夾複製，取代根目錄中的 static 和 layouts 資料夾 6. <a class="read-more" href="https://chswei.github.io/post/programming/hugo/">&raquo;</a></p>
+        <a href='https://chswei.github.io/post/programming/hugo/' style="color:rgb(79, 133, 133);font-size:0.7em">Read More >></a></section>
+    <footer class="post-meta">
+        
+
+        
+            
+            
+
+            
+            
+            
+            chswei
+                 
+        
+
+        
+        <time class="post-date" datetime="2018-07-12T22:36:43&#43;08:00">
+            12 Jul 2018
+        </time>
+    </footer>
+</article>
 
 	
 	   <article class="post post">
@@ -328,9 +361,7 @@ install.packages(c(&#39;repr&#39;, &#39;IRdisplay&#39;, &#39;evaluate&#39;, &#39
 
 	<nav class="pagination" role="navigation">
 	
-	    <a class="newer-posts" href="https://chswei.github.io/post/">&larr; Newer Posts</a>
-	
-	<span class="page-number">Page 2 of 2</span>
+	<span class="page-number">Page 1 of 1</span>
 	
 </nav>
 
