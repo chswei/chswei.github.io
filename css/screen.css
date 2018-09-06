@@ -312,10 +312,11 @@ h4, h5, h6 {
     -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-    color: #2E2E2E;
+    color: rgb(79, 133, 133);
     line-height: 1.15em;
     margin: 0 0 0.4em 0;
     font-family: "Noto Sans", sans-serif;
+    font-weight: 550;
     text-rendering: geometricPrecision;
 }
 
@@ -361,6 +362,8 @@ p, ul, ol, dl {
     -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
     margin: 0 0 1.75em 0;
     text-rendering: geometricPrecision;
+    font-weight: 350;
+    color: #666;
 }
 
 ol, ul {
@@ -1071,12 +1074,13 @@ body:not(.post-template) .post-title {
 .post-title a {
     text-decoration: none;
     color: rgb(79, 133, 133);
+    font-weight: 550;
 }
 
 .post-excerpt p {
     margin: 0;
     font-size: 0.9em;
-    font-weight: 10;
+    font-weight: 300;
     color: #666;
     line-height: 1.7em;
     
