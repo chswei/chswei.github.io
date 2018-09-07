@@ -1084,7 +1084,7 @@ body:not(.post-template) .post-title {
     color: #666;
     line-height: 1.7em;
     
-    display: block;
+    /*display: block;*/
     max-height: 8.5em;
     overflow: hidden;
 }

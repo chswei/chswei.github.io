@@ -12,20 +12,20 @@
     
     
     <item>
-      <title>Diary</title>
-      <link>https://chswei.github.io/categories/diary/</link>
-      <pubDate>Tue, 04 Sep 2018 18:16:08 +0800</pubDate>
-      
-      <guid>https://chswei.github.io/categories/diary/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Medicine</title>
       <link>https://chswei.github.io/categories/medicine/</link>
       <pubDate>Sat, 11 Aug 2018 17:52:21 +0800</pubDate>
       
       <guid>https://chswei.github.io/categories/medicine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Miscellany</title>
+      <link>https://chswei.github.io/categories/miscellany/</link>
+      <pubDate>Tue, 04 Sep 2018 18:16:08 +0800</pubDate>
+      
+      <guid>https://chswei.github.io/categories/miscellany/</guid>
       <description></description>
     </item>
     
