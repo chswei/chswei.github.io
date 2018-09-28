@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>Copyright © 2018</copyright>
-    <lastBuildDate>Tue, 04 Sep 2018 18:16:08 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 23 Sep 2018 23:32:18 +0800</lastBuildDate>
     
 	<atom:link href="https://chswei.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>實用 Mac Apps 推薦</title>
+      <link>https://chswei.github.io/post/miscellany/mac-apps/</link>
+      <pubDate>Sun, 23 Sep 2018 23:32:18 +0800</pubDate>
+      
+      <guid>https://chswei.github.io/post/miscellany/mac-apps/</guid>
+      <description>從 Windows 轉換到 MacOS 剛滿三個月，大多適應良好，系統介面、鍵盤配置和 trackpad 手勢等都能很快上手。這段期間也探索了許多 Apps，推薦列表如下：
+1. 生產力工具    名稱 簡介     Alfred 必裝神器！類似 Spotlight 的軟體，但功能遠遠不止這樣。它能讓你大大減少離開來回鍵盤和觸控板的時間，詳細教學可以參考這篇教學。   Evernote 知名筆記軟體，應該不用多說，電腦玩物部落格上有許多使用訣竅。   ‎Notability 筆記軟體，我主要用來匯入 PDF 製作上課筆記。不過此軟體還是 iPad 配合 Apple Pencil 效果最佳。   Bear 我的寫作主力軟體，UI 乾淨漂亮，且支援 Markdown 語法。可參考這篇的介紹。   Ticktick 待辦清單軟體，免費版的功能就很齊全了，且 Windows、Mac、Android、iOS 都能下載，同步很方便。也有很多人推薦 Things 這個軟體，但有點貴&amp;hellip;    2. 系統管理工具    名稱 簡介     Homebrew 套件管理工具，讓你可以用一句指令來安裝軟體或套件，極為方便。嚴格來說不是 App，但還是列在這邊讓各位參考。   coconutBattery 查看電池健康度。   Macs Fan Control 風扇控制軟體，同時也可查看機身各個部位的溫度。   Magnet 分割視窗軟體，最棒的是它支援「拖曳視窗到螢幕邊界後會自動分割」的功能。   AppCleaner 平時若要刪除肥大的軟體 (如 Adobe) 時，可能會有刪除不乾淨的情況。而 AppCleaner 就是最好解決的方法。   Amphetamine 在一段時間內，防止電腦進入睡眠狀態。    3.</description>
+    </item>
     
     <item>
       <title>周易哲學</title>
