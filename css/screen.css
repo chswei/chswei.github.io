@@ -498,12 +498,13 @@ table {
     width: 100%;
     max-width: 100%;
     background-color: transparent;
+    font-weight: 300;
 }
 
 table th,
 table td {
     padding: 8px;
-    line-height: 20px;
+    line-height: 150%;
     text-align: left;
     vertical-align: top;
     border-top: #EFEFEF 1px solid;
