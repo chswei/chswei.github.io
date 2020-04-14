@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="在學重考心得"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@wujiyaker"/>
+
+
+
+  	<meta property="og:title" content="在學重考心得 &middot; Random Forest" />
+  	<meta property="og:site_name" content="Random Forest" />
+  	<meta property="og:url" content="https://chswei.github.io/post/miscellany/resit/" />
+
+    
+        
+            <meta property="og:image" content="/images/forest.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-04-14T23:10:03&#43;08:00" />
+
+    
+    
+
+    <title>在學重考心得 &middot; Random Forest</title>
+
+    
+    <meta name="description" content="突然想到以前重考時的心得，當初是同學幫我 po 在 ptt 上，想說也把它放在這裡好了。之後也很幸運地幫助了某位學弟。
+（寫於 2015/08/23）
+因為許多人的幫助與支持，小弟幸運地重考上了醫學系。在學重考是條艱辛的路，因此希望藉由這篇文章，讓有心走上這條路的人有個參考的方向。
+先說明一下背景，我在高中是三類組的，" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://chswei.github.io/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="https://chswei.github.io/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="https://chswei.github.io/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://chswei.github.io/css/nav.css" />
+
+    
+
+    
+
+    
+      
+          <link href="https://chswei.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Random Forest" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.42.2" />
+
+    <link rel="canonical" href="https://chswei.github.io/post/miscellany/resit/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": 
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "url": https://chswei.github.io/,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": 在學重考心得,
+    "name": 在學重考心得,
+    "wordCount": 36,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://chswei.github.io/post/miscellany/resit/,
+    "datePublished": 2020-04-14T23:10Z,
+    "dateModified": 2020-04-14T23:10Z,
+    
+    
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://chswei.github.io/post/miscellany/resit/
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-122220812-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://chswei.github.io/about">About Me</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://chswei.github.io/">Home</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://chswei.github.io/categories/programming">內篇</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://chswei.github.io/categories/medicine">外篇</a>
+            </li>
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="https://chswei.github.io/categories/miscellany">雜篇</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="https://chswei.github.io/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">在學重考心得</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2020-04-14T23:10:03&#43;08:00">
+            Apr 14, 2020
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<p>突然想到以前重考時的<a href="https://www.ptt.cc/bbs/RESIT/M.1443491057.A.532.html">心得</a>，當初是同學幫我 po 在 ptt 上，想說也把它放在這裡好了。之後也很幸運地幫助了<a href="https://www.ptt.cc/man/RESIT/D9C4/D71B/DFC5/D4AD/M.1489582344.A.6B6.html">某位學弟</a>。</p>
+
+<p>（寫於 2015/08/23）</p>
+
+<p>因為許多人的幫助與支持，小弟幸運地重考上了醫學系。在學重考是條艱辛的路，因此希望藉由這篇文章，讓有心走上這條路的人有個參考的方向。</p>
+
+<p>先說明一下背景，我在高中是三類組的，目標是醫學或中醫系(不考慮牙醫)。應屆指考成績不甚理想，分數在中醫系邊緣。在醫科的志願後，我填了台大財金。為什麼呢？由於國文、英文、數乙考得不錯，雖然自己從來沒想過要念財金，但考慮到未來出路頗佳，又是許多人夢寐以求的科系，就姑且試試看。然而放榜那一天看到自己與中醫系以 0.3 分失之交臂時，心中仍是不太甘心，萌生了重考的念頭。選擇在學重考的原因如下:</p>
+
+<ol>
+<li>我不喜歡重考班枯燥的生活方式。</li>
+<li>想換個環境念書。</li>
+<li>能在台大學習實在是個不可多得的好機會。
+<br></li>
+</ol>
+
+<hr />
+
+<p>關於在學重考，我想分作以下幾點來討論:</p>
+
+<h2 id="反省">反省</h2>
+
+<p>準備在學重考前，最重要的一件事就是找出大考成績不理想的原因。像我認為自己考糟的原因最主要是「壓力太大」和「太容易緊張」，這也是我為何選擇在學重考的原因。在大學中，有許多事物能夠分散注意力，不至於整天都在高壓的環境下複習那些讀過好幾遍的課本知識。反省看似簡單，但它實實在在是重考成敗的關鍵，否則也只是白白浪費一年罷了。</p>
+
+<h2 id="複習">複習</h2>
+
+<p>由於我複習的過程不算很有系統，且念書的方法和參考書因人而異，所以就不分享各科怎麼念。我想稍微討論「學測複習」與「大學課業」的時間分配。</p>
+
+<p>平常我都在複習學測，只有班上小考和期中期末考的前一週會拿出課本來念。話雖如此，小考幾乎是每個禮拜都有，再加上繁多的報告，時間真的不夠用，所以要如何分配時間是在學重考的關鍵。</p>
+
+<p>對我來說。由於自認為高三已經複習得很扎實，大考失利純粹是因為心理壓力，所以我的目標只是在這幾個月中維持先前的水準。通常我是用”寫題目”的方式來決定兩者時間的分配。學測模擬試題寫得不順時，就花多一點時間在”學測複習”，並回過頭翻參考書；寫得順時，就可以多念一點大學課業。總而言之，我認為只要不忘記自己重考的決心，知道自己在做什麼並堅持下去，學測複習與大學課業之間的時間分配一定會自行達到平衡的。</p>
+
+<p>(大學課業可顧可不顧，但我無法接受被當的感覺，所以算是滿認真地念。一學年下來，我在系上 122 人當中，排名第 10，證明人是有無窮潛力的!如果不打算顧大學課業的，這部分就自行略過吧。)</p>
+
+<h2 id="活動">活動</h2>
+
+<p>開學前參加了迎新宿營，之後就幾乎沒參加系上活動了。倘若行有餘力的話，我覺得參加一些活動也不無好處，可以多認識同學，又可以在這一年中增添難忘的回憶，但一定要適時評估自己的讀書進度，不要忘了真正該做的事。</p>
+
+<h2 id="朋友">朋友</h2>
+
+<p>在學重考的事，我本來是打算默默進行，除了室友外(畢竟我都在宿舍念書，告知了比較方便)，不打算跟系上的人透露，因為萬一重考失敗，會有點尷尬與難堪。但開學後，我和少數幾個系上同學變得特別熟，因此閒聊的時候把這件事說了出來。我一直覺得我做對了，因為重考的這一年中，他們的鼓勵和解悶是我能夠撐下去的原因之一。</p>
+
+<h2 id="獨處">獨處</h2>
+
+<p>重考生很多，但在學重考占的比例不高，因此身邊幾乎不會出現志同道合的同學。如果無法忍受他人玩樂時，自己卻要在宿舍或圖書館寂寞念書的人，千萬別嘗試在學重考，因為真的很痛苦。</p>
+
+<h2 id="申請">申請</h2>
+
+<p>學測考得還不錯，因此我決定申請看看，畢竟指考物、化、生難度提高許多，對於幾個月來一直在念會計學、經濟學的我來說有點困難。但我沒有辦休學，而是一邊繼續念大學，一邊準備備審和面試。</p>
+
+<p>這個決定有好有壞，壞的是:因為我是個不太會說話的人，又要上課而沒時間練好面試，準備得不太充分，導致最後成績亂七八糟；好的是:我在台大的最後一學期修到許多自己感興趣的課(假如我申請失敗，這個好處恐怕讓人開心不起來)。申請入學這部分，我做得很失敗。除非對面試有十足的自信，我覺得還是休學準備比較好，找時間回到母校和學弟妹一起練習總比孤軍奮戰來得輕鬆。</p>
+
+<hr />
+
+<p>在學重考其實是個很大的賭注，為了準備考試，勢必要放棄許多活動。倘若重考成功，並不會有任何損失，因為你會重新擁有大一生活，甚至還得到這難能可貴的一年；但假如失敗了，大學生活等於只有三年，代價不小。因此對自身能力與程度沒有一定自信的人，盡量不要走上這條路。老實說，準備重考的幾個月中，我複習的時間和強度大概高三時的三、四成左右。所以能夠重考成功，真的只能說是以前基礎打得頗牢固加上運氣極佳罷了。</p>
+
+<p>人生中遇到的任何經驗都是彌足珍貴的，重考的這一年當然也不例外。希望這篇能夠讓那些願意再給自己一次機會追逐夢想的人們一點幫助。</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+
+<section class="author">
+  <h4><a href="https://chswei.github.io/">chswei</a></h4>
+  
+  <p>Read <a href="https://chswei.github.io/">more posts</a> by this author.</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Taiwan</span>
+    <span class="author-link icon-link"><a href="https://chswei.github.io/">https://chswei.github.io/</a></span>
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%e5%9c%a8%e5%ad%b8%e9%87%8d%e8%80%83%e5%bf%83%e5%be%97&nbsp;-&nbsp;Random%20Forest&amp;url=https%3a%2f%2fchswei.github.io%2fpost%2fmiscellany%2fresit%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fchswei.github.io%2fpost%2fmiscellany%2fresit%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fchswei.github.io%2fpost%2fmiscellany%2fresit%2f&amp;description=%e5%9c%a8%e5%ad%b8%e9%87%8d%e8%80%83%e5%bf%83%e5%be%97"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fchswei.github.io%2fpost%2fmiscellany%2fresit%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/chswei.github.io\/post\/miscellany\/resit\/";  
+this.page.identifier = "https:\/\/chswei.github.io\/post\/miscellany\/resit\/"; 
+};
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://chswei.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://chswei.github.io/post/medicine/preclerk/">
+          <section class="post">
+              <h2>寫在成為 Clerk 前</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Random Forest</a> Copyright © 2018</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="https://chswei.github.io/js/jquery.js"></script>
+    <script type="text/javascript" src="https://chswei.github.io/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://chswei.github.io/js/index.js"></script>
+    
+</body>
+</html>
+

@@ -246,6 +246,8 @@
     
         
     
+        
+    
 
     
 
@@ -263,6 +265,50 @@
 </nav>
 
     </div>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="https://chswei.github.io/post/programming/r-kernel-for-jupyter-notebook/">在 Jupyter Notebook 上安裝 R (Windows 10)</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>最近為了某個目的，想在 Jupyter Notebook 上寫 R code。利用 IRkernel 就能達到這件事，然而在安裝的過程中發生了一些問題，因此做了很多搜尋，將操作步驟整理在此，希望能幫助到一些人，同時也紀錄自己對於電腦世界的懵懂無知。
+安裝 IRkernel 的前提 (Requirements)  安裝好 R （我的版本是 3.4.1，若還有安裝 RStudio 更好）。 安裝好 Jupyter Notebook （我是用 Anaconda 安裝的）。  此路不通 (Not Work for Me) 一開始我按照這個網站的步驟操作，在 Anaconda Prompt 內打入：
+conda update anaconda conda install -c r r-essentials 在筆電和桌電上試驗都在第二步出現了 Error，沒辦法安裝，查了 google 和 stackoverflow 都找不到解答。（不過好多東西我都看不懂，所以也有可能是有解的。）之後還在 YouTube 看別人怎麼安裝，但對我來說還是不成功。
+解法 (My Solution) 後來在某影片中的某片段看到一個似乎是 IRkernel 的官方網址，按照裡面的方法後，就安裝成功了！（心得：看官方文件還是最準的 OTZ）
+Step 1 在 RStudio 的 Console 內打入：
+install.packages(c(&#39;repr&#39;, &#39;IRdisplay&#39;, &#39;evaluate&#39;, &#39;crayon&#39;, &#39;pbdZMQ&#39;, &#39;devtools&#39;, &#39;uuid&#39;, &#39;digest&#39;)) devtools::install_github(&#39;IRkernel/IRkernel&#39;) Step 2 (Wrong) 在 RStudio 中的 Console 內打入： </p>
+        
+        <a href="https://chswei.github.io/post/programming/r-kernel-for-jupyter-notebook/" style="color:rgb(79, 133, 133);font-size:0.7em">Read More >></a>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+            
+            
+
+            
+            
+            
+            chswei
+                 
+        
+
+        on
+            
+                <a href="https://chswei.github.io//tags/r/">#r</a>,
+            
+                <a href="https://chswei.github.io//tags/data_science/">#data_science</a>,
+            
+        
+        <time class="post-date" datetime="2018-07-12T21:55:00&#43;08:00">
+            12 Jul 2018
+        </time>
+    </footer>
+</article>
 
     
         <article class="post post">
